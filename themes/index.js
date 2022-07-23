@@ -1,27 +1,15 @@
 import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 import { deepmerge } from "@mui/utils";
+import colorTheme from "./colorTheme";
+import componentTheme from "./componentTheme";
+import fontTheme from "./fontTheme";
 
-const colorTheme = {
-  palette: {
-    primary: {
-      main: "#55828B",
-      dark: "#3B6064",
-      neutral: "#87BBA2",
-    },
-    secondary: {
-      main: "#C9E4CA",
-      mainAlt: "#E7DECD",
-    },
-  },
-};
+const themes = [colorTheme, componentTheme, fontTheme];
 
-const fontTheme = {
-  typography: {
-    fontFamily: ["Roboto", "sans-serif"],
-  },
-};
+const packedThemes = themes.reduce(
+  (prevTheme, currTheme) => deepmerge(prevTheme, currTheme),
+  {}
+);
 
-const theme = createTheme(deepmerge(colorTheme, fontTheme));
-
-
+const theme = createTheme(packedThemes);
 export default theme;
