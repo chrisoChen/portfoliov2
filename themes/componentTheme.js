@@ -23,6 +23,23 @@ const componentTheme = {
         },
       },
     },
+    MuiSvgIcon: {
+      defaultProps: {
+        sx: {
+          fontSize: { xs: "3rem", sm: "3.5rem", md: "5rem" },
+        },
+      },
+    },
+    MuiIconButton: {
+      variants: [
+        {
+          props: { variant: "logo" },
+          style: {
+            margin: "0 auto",
+          },
+        },
+      ],
+    },
   },
 };
 
