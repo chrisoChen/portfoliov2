@@ -1,4 +1,4 @@
-import { createTheme, responsiveFontSizes } from "@mui/material/styles";
+import { createTheme } from "@mui/material/styles";
 import { deepmerge } from "@mui/utils";
 import colorTheme from "./colorTheme";
 import componentTheme from "./componentTheme";

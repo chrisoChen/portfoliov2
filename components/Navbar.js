@@ -1,63 +1,63 @@
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
+import LogoIconBtn from "./LogoIconBtn";
+
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
-import { Menu, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
-import Logo from "./Logo";
 import Box from "@mui/material/Box";
 import MuiLink from "@mui/material/Link";
-import NextLink from "next/link";
 import DescriptionIcon from "@mui/icons-material/Description";
-import styled from "@emotion/styled";
 import MenuIcon from "@mui/icons-material/Menu";
 import Divider from "@mui/material/Divider";
 import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemText from "@mui/material/ListItemText";
-import { breakpoints } from "@mui/system";
 import Drawer from "@mui/material/Drawer";
+import CloseIcon from "@mui/icons-material/Close";
+import NextLink from "next/link";
+import NavItems from "./NavItems";
 
-function Navbar(props) {
-  const { window } = props;
+function Navbar() {
   const [drawerNavOpen, setDrawerNavOpen] = useState(false);
-  const container =
-    window !== undefined ? () => window().document.body : undefined;
-
-  const options = ["About", "Experience", "Projects", "Contact"];
-  const navItems = options.map((option) => {
-    return (
-      <Typography variant="body1" component="li" key={uuidv4()}>
-        <NextLink href={`#${option}`} passHref>
-          <MuiLink color="secondary" underline="hover">
-            {option}
-          </MuiLink>
-        </NextLink>
-      </Typography>
-    );
-  });
+  const navOptions = ["About", "Experience", "Projects", "Contact"];
 
   const handleDrawerToggle = () => {
     setDrawerNavOpen(!drawerNavOpen);
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
-      </Typography>
-      <Divider />
-      <List>{navItems}</List>
+    <Box onClick={handleDrawerToggle} color="primary">
+      <Container
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+        }}
+      >
+        <IconButton
+          sx={{
+            my: 2,
+            alignSelf: "flex-end",
+          }}
+        >
+          <CloseIcon color="secondary" variant="icon" />
+        </IconButton>
+
+        <Box sx={{ my: 2, alignSelf: "center" }}>
+          <LogoIconBtn />
+        </Box>
+        <Divider />
+        <List sx={{ py: 3 }}>{}</List>
+      </Container>
     </Box>
   );
 
-  const MenuBoxSx = {
+  const NavBoxSx = {
     display: "flex",
     gap: "2rem",
     listStyle: "none",
+    padding: 0,
   };
 
   return (
@@ -78,27 +78,16 @@ function Navbar(props) {
               <MenuIcon sx={{ fontSize: { xs: "1.5rem", sm: "2rem" } }} />
             </IconButton>
 
-            <IconButton
-              size="large"
-              variant="logo"
-              edge={false}
-              aria-label="Logo Button"
-              sx={{
-                display: "block",
-                mx: { md: 0 },
-              }}
-            >
-              <Logo />
-            </IconButton>
+            <LogoIconBtn />
             <Box
               maxWidth="lg"
               component="ul"
               sx={{
-                ...MenuBoxSx,
+                ...NavBoxSx,
                 ...{ display: { xs: "none", sm: "none", md: "flex" } },
               }}
             >
-              {navItems}
+              <NavItems navOptions={navOptions} />
             </Box>
             <Button
               size="large"
@@ -113,19 +102,12 @@ function Navbar(props) {
 
       <Box>
         <Drawer
-          container={container}
           open={drawerNavOpen}
           onClose={handleDrawerToggle}
           ModalProps={{
             keepMounted: true, // Better open performance on mobile.
           }}
-          sx={{
-            display: { xs: "block", md: "none" },
-            "& .MuiDrawer-paper": {
-              boxSizing: "border-box",
-              width: 240,
-            },
-          }}
+          sx={{ display: { xs: "block", md: "none" } }}
         >
           {drawer}
         </Drawer>
