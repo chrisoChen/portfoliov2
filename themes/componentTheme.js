@@ -87,6 +87,11 @@ const componentTheme = {
         },
       },
     },
+    MuiContainer: {
+      defaultProps: {
+        maxWidth: "lg",
+      },
+    },
   },
 };
 

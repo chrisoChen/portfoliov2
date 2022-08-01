@@ -6,7 +6,7 @@ import Stack from "@mui/material/Stack";
 
 function Intro() {
   return (
-    <Container maxWidth="lg" sx={{ textAlign: "center" }}>
+    <Container sx={{ textAlign: "center" }}>
       <Box my={5}>
         <Typography variant="h1">Chris Chen</Typography>
         <Typography variant="h2">Software Developer</Typography>

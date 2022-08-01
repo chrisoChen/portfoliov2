@@ -34,7 +34,7 @@ function Navbar() {
   return (
     <Box>
       <AppBar position="static" elevation={0} sx={{ py: 2 }}>
-        <Container maxWidth="lg">
+        <Container>
           <Toolbar
             disableGutters
             component="ul"
