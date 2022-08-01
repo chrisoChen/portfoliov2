@@ -36,8 +36,13 @@ function Navbar() {
       <AppBar position="static" elevation={0} sx={{ py: 2 }}>
         <Container maxWidth="lg">
           <Toolbar
+            disableGutters
             component="ul"
-            sx={{ justifyContent: "space-between", alignItems: "center" }}
+            sx={{
+              justifyContent: "space-between",
+              alignItems: "center",
+              padding: 0,
+            }}
           >
             <IconButton
               onClick={handleDrawerToggle}
