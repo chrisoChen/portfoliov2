@@ -1,5 +1,11 @@
+import { Intro } from "../section_components";
+
 function Main() {
-    return ( <div><h1>Hello world!</h1></div> );
+  return (
+    <div>
+      <Intro></Intro>
+    </div>
+  );
 }
 
 export default Main;
