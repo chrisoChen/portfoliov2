@@ -76,6 +76,19 @@ const componentTheme = {
       defaultProps: {
         maxWidth: "lg",
       },
+      variants: [
+        {
+          props: { variant: "textCenter" },
+          style: {
+            textAlign: "center",
+          },
+        },
+      ],
+    },
+    MuiStack: {
+      defaultProps: {
+        direction: { xs: "column", md: "row" },
+      },
     },
   },
 };
