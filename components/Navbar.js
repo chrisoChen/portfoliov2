@@ -39,16 +39,19 @@ function Navbar() {
             disableGutters
             component="ul"
             sx={{
-              justifyContent: "space-between",
+              justifyContent: { xs: "center", md: "space-between" },
               alignItems: "center",
               padding: 0,
+              position: "relative",
             }}
           >
             <IconButton
               onClick={handleDrawerToggle}
               color="secondary"
               sx={{
-                display: { sm: "flex", md: "none" },
+                display: { xs: "static", md: "none" },
+                position: "absolute",
+                left: "0",
               }}
             >
               <MenuIcon sx={{ fontSize: { xs: "1.5rem", sm: "2rem" } }} />

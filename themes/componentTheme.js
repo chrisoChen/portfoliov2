@@ -27,9 +27,6 @@ const componentTheme = {
       },
     },
     MuiSvgIcon: {
-      defaultProps: {
-        sx: {},
-      },
       variants: [
         {
           props: { variant: "logo" },
@@ -38,18 +35,6 @@ const componentTheme = {
               fontSize: "5rem",
             },
             fontSize: "3rem",
-          },
-        },
-      ],
-    },
-    MuiIconButton: {
-      variants: [
-        {
-          props: { variant: "logo" },
-          style: {
-            [tempTheme.breakpoints.up("md")]: {
-              margin: "0",
-            },
           },
         },
       ],
