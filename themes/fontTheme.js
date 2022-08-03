@@ -18,10 +18,10 @@ const fontTheme = {
       color: colorTheme.palette.secondary.main,
       fontSize: "3rem",
       lineHeight: "56.25px",
-      fontWeight: "400",
+      fontWeight: "500",
       fontStyle: "normal",
     },
-    p: {
+    body1: {
       color: colorTheme.palette.secondaryAlt.main,
       fontSize: "1.5rem",
       lineHeight: "28.13px",

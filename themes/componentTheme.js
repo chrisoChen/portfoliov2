@@ -54,6 +54,12 @@ const componentTheme = {
     },
     MuiDivider: {
       styleOverrides: {
+        // root: {
+        //   "& .MuiDivider-wrapper": {
+        //     paddingLeft: "0",
+        //     paddingRight: "30px",
+        //   },
+        // },
         textAlignLeft: {
           "&::before": {
             width: "0%",

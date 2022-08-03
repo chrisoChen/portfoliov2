@@ -1,26 +1,33 @@
 import { Container } from "@mui/material";
 import { Stack } from "@mui/material";
+import { Grid } from "@mui/material";
 import { Typography } from "@mui/material";
+import { Box } from "@mui/material";
+import { Divider } from "@mui/material";
 import Image from "next/image";
 import profilePic from "../public/cartoon-profile-chris.png";
 
 function About() {
   return (
-    <Container>
-      <Stack
-        direction={{ xs: "column-reverse", md: "row" }}
+    <Container sx={{ width: { xs: "100%", md: "80%" } }}>
+      <Grid
+        container
+        direction={{ xs: "column", md: "row" }}
         justifyContent="flex-start"
         alignItems={{ xs: "center", md: "flex-start" }}
+        rowGap={4}
+        colGap={2}
       >
-        <Container sx={{ width: { xs: "100%", md: "40%" } }}>
+        <Grid item xs={12}>
           <Typography
             variant="h2"
-            gutterBottom
             sx={{ textAlign: { xs: "center", md: "left" } }}
           >
             About Me
           </Typography>
-          <Typography variant="p">
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <Typography variant="body1">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
             omnis facere sunt quo? Tenetur inventore facilis corrupti excepturi
             ratione eius ut distinctio? Rerum expedita voluptas earum unde ullam
@@ -34,15 +41,20 @@ function About() {
             voluptate impedit saepe aperiam quo autem deserunt possimus cumque
             reiciendis magnam ipsum nemo.
           </Typography>
-        </Container>
-        <Container variant="textCenter" maxWidth="sm" sx={{ width: "40%" }}>
-          <Image
-            src={profilePic}
-            alt="Picture of the software developer, Chris Chen "
-            priority
-          />
-        </Container>
-      </Stack>
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <Container
+            sx={{ width: { xs: "100%", md: "80%" }, maxWidth: "350px" }}
+            maxWidth="300px"
+          >
+            <Image
+              src={profilePic}
+              alt="Picture of the software developer, Chris Chen "
+              priority
+            />
+          </Container>
+        </Grid>
+      </Grid>
     </Container>
   );
 }
