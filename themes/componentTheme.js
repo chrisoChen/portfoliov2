@@ -54,12 +54,17 @@ const componentTheme = {
     },
     MuiDivider: {
       styleOverrides: {
+        // 
+        // Add spacing between divider and content when using items inside Divider
+        // 
         // root: {
         //   "& .MuiDivider-wrapper": {
         //     paddingLeft: "0",
         //     paddingRight: "30px",
         //   },
         // },
+
+        // Remove left or right divider when adding content inside MUI Divider
         textAlignLeft: {
           "&::before": {
             width: "0%",
@@ -87,6 +92,15 @@ const componentTheme = {
           props: { variant: "textCenter" },
           style: {
             textAlign: "center",
+          },
+        },
+        {
+          props: { variant: "section" },
+          style: {
+            [tempTheme.breakpoints.up("md")]: {
+              width: "80%",
+            },
+            width: "100%",
           },
         },
       ],

@@ -9,19 +9,12 @@ import profilePic from "../public/cartoon-profile-chris.png";
 
 function About() {
   return (
-    <Container sx={{ width: { xs: "100%", md: "80%" } }}>
-      <Grid
-        container
-        direction={{ xs: "column", md: "row" }}
-        justifyContent="flex-start"
-        alignItems={{ xs: "center", md: "flex-start" }}
-        rowGap={4}
-        colGap={2}
-      >
+    <Container variant="section">
+      <Grid container direction={{ xs: "column", md: "row" }} rowGap={4}>
         <Grid item xs={12}>
           <Typography
             variant="h2"
-            sx={{ textAlign: { xs: "center", md: "left" } }}
+            sx={{ textAlign: "left", alignSelf: "flex-start" }}
           >
             About Me
           </Typography>
@@ -49,7 +42,7 @@ function About() {
           >
             <Image
               src={profilePic}
-              alt="Picture of the software developer, Chris Chen "
+              alt="A cartoon portrait of the software developer, Chris Chen. Chris poses directly at the camera and his glasses have been colored yellow and turquoise for a heightened cartoon look."
               priority
             />
           </Container>

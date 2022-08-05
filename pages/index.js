@@ -1,10 +1,12 @@
-import { Intro, About } from "../section_components";
+import { Intro, About, Experience } from "../section_components";
 import { Box } from "@mui/system";
+
 function Main() {
   return (
     <Box>
-      <Intro></Intro>
-      <About></About>
+      <Intro />
+      <About />
+      <Experience />
     </Box>
   );
 }
