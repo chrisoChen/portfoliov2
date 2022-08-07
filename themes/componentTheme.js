@@ -54,17 +54,14 @@ const componentTheme = {
     },
     MuiDivider: {
       styleOverrides: {
-        // 
-        // Add spacing between divider and content when using items inside Divider
-        // 
-        // root: {
-        //   "& .MuiDivider-wrapper": {
-        //     paddingLeft: "0",
-        //     paddingRight: "30px",
-        //   },
-        // },
+        root: {
+          "& .MuiDivider-wrapper": {
+            paddingLeft: "0",
+            paddingRight: "30px",
+          },
+        },
 
-        // Remove left or right divider when adding content inside MUI Divider
+        // Remove trailing divider when adding content inside MUI Divider
         textAlignLeft: {
           "&::before": {
             width: "0%",
@@ -101,6 +98,8 @@ const componentTheme = {
               width: "80%",
             },
             width: "100%",
+            // padding: "3rem 0",
+            padding: `${tempTheme.spacing(6)} 0`,
           },
         },
       ],
@@ -108,6 +107,62 @@ const componentTheme = {
     MuiStack: {
       defaultProps: {
         direction: { xs: "column", md: "row" },
+      },
+    },
+    MuiAccordion: {
+      defaultProps: {
+        // Prevents icon shifting when expanding 
+        disableGutters: true,
+      },
+      styleOverrides: {
+        root: {
+          width: "85%",
+          border: `2px solid ${colorTheme.palette.secondary.main}`,
+          "&:not(:last-child)": {
+            borderBottom: 0,
+          },
+          margin: "0 auto",
+          "&.Mui-expanded": {
+            margin: "0 auto",
+          },
+
+          "&:before": {
+            display: "none",
+          },
+        },
+      },
+    },
+    MuiAccordionSummary: {
+      styleOverrides: {
+        root: {
+          flexDirection: "row-reverse",
+          backgroundColor: colorTheme.palette.dark.main,
+          "& .MuiAccordionSummary-content": {
+            marginLeft: tempTheme.spacing(1),
+          },
+          "&:hover": {
+            backgroundColor: colorTheme.palette.primary.main,
+            opacity: "0.95",
+            transition: "0.3s",
+          },
+        },
+      },
+    },
+    MuiAccordionDetails: {
+      styleOverrides: {
+        root: {
+          backgroundColor: colorTheme.palette.dark.main,
+          borderTop: `1px solid ${colorTheme.palette.secondary.main}`,
+          opacity: "0.95",
+        },
+      },
+    },
+    MuiChip: {
+      styleOverrides: {
+        root: {
+          border: `1px solid ${colorTheme.palette.secondaryAlt.main}`,
+          color: colorTheme.palette.secondary.main,
+        },
       },
     },
   },
