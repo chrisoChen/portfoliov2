@@ -111,7 +111,7 @@ const componentTheme = {
     },
     MuiAccordion: {
       defaultProps: {
-        // Prevents icon shifting when expanding 
+        // Prevents icon shifting when expanding
         disableGutters: true,
       },
       styleOverrides: {
@@ -158,6 +158,10 @@ const componentTheme = {
       },
     },
     MuiChip: {
+      defaultProps: {
+        size: "small",
+        color: "dark",
+      },
       styleOverrides: {
         root: {
           border: `1px solid ${colorTheme.palette.secondaryAlt.main}`,
