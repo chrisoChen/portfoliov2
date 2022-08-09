@@ -1,5 +1,4 @@
 import { Typography } from "@mui/material";
-import Chip from "@mui/material/Chip";
 import Accordion from "@mui/material/Accordion";
 import Stack from "@mui/material/Stack";
 import AccordionSummary from "@mui/material/AccordionSummary";
@@ -8,7 +7,7 @@ import ExpandCircleDownIcon from "@mui/icons-material/ExpandCircleDown";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import Link from "@mui/material/Link";
 
-import { v4 as uuidv4 } from "uuid";
+import InfoChips from "./InfoChips";
 
 function InfoAccordion(props) {
   const {
@@ -23,9 +22,6 @@ function InfoAccordion(props) {
     expanded,
     handleChange = () => null,
   } = props;
-  const techTools = jobTools.map((tool) => {
-    return <Chip label={tool} key={uuidv4()}></Chip>;
-  });
 
   return (
     <Accordion expanded={expanded === index} onChange={handleChange(index)}>
@@ -60,7 +56,7 @@ function InfoAccordion(props) {
         </Typography>
 
         <Stack direction="row" mt={1} flexWrap="wrap" gap={1}>
-          {techTools}
+          <InfoChips infoList={jobTools} />
         </Stack>
         <Typography variant="body1" mt={2}>
           {jobDetails}
