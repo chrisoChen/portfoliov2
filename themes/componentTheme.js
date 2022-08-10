@@ -56,11 +56,9 @@ const componentTheme = {
       styleOverrides: {
         root: {
           "& .MuiDivider-wrapper": {
-            paddingLeft: "0",
-            paddingRight: "30px",
+            padding: 0,
           },
         },
-
         // Remove trailing divider when adding content inside MUI Divider
         textAlignLeft: {
           "&::before": {
@@ -68,11 +66,15 @@ const componentTheme = {
           },
           "&::after": {
             width: "100%",
+            borderTop: "1px solid",
+            borderColor: colorTheme.palette.secondary.main,
           },
         },
         textAlignRight: {
           "&::before": {
             width: "100%",
+            borderTop: "1px solid",
+            borderColor: colorTheme.palette.secondary.main,
           },
           "&::after": {
             width: "0%",
@@ -97,7 +99,7 @@ const componentTheme = {
             [tempTheme.breakpoints.up("md")]: {
               width: "80%",
             },
-            width: "100%",
+            width: "95%",
             // padding: "3rem 0",
             padding: `${tempTheme.spacing(6)} 0`,
           },
