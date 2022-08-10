@@ -138,13 +138,12 @@ const componentTheme = {
       styleOverrides: {
         root: {
           flexDirection: "row-reverse",
-          backgroundColor: colorTheme.palette.dark.main,
+          backgroundColor: colorTheme.palette.primary.main,
           "& .MuiAccordionSummary-content": {
             marginLeft: tempTheme.spacing(1),
           },
           "&:hover": {
-            backgroundColor: colorTheme.palette.primary.main,
-            opacity: "0.95",
+            opacity: "0.85",
             transition: "0.3s",
           },
         },
@@ -155,7 +154,6 @@ const componentTheme = {
         root: {
           backgroundColor: colorTheme.palette.dark.main,
           borderTop: `1px solid ${colorTheme.palette.secondary.main}`,
-          opacity: "0.95",
         },
       },
     },

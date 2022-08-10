@@ -34,7 +34,11 @@ function InfoStack(props) {
         target="_blank"
         rel="noopener noreferrer"
         color="secondary.main"
-        sx={{ display: "flex", alignItems: "center" }}
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          "&:hover": { opacity: "0.65", transition: "0.3s" },
+        }}
       >
         <GitHubIcon sx={{ color: "secondary.main" }} />
       </Link>
@@ -64,7 +68,6 @@ function InfoStack(props) {
           <Box mt={1}>
             <InfoChips infoList={projectTools} />
           </Box>
-          {githubLink}
           <Typography variant="body1" mt={3}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
             deleniti ullam ut nemo pariatur facilis perferendis quidem illo
@@ -73,6 +76,7 @@ function InfoStack(props) {
             eligendi aliquid dolorem, id, labore culpa iure laudantium
             repellendus natus nostrum dicta esse fugit iste.
           </Typography>
+          {githubLink}
         </Box>
         <Box
           sx={{

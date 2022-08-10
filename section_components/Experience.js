@@ -48,7 +48,7 @@ function Experience() {
           expanded={expanded}
           handleChange={() => handleChange(1)}
           index={1}
-          companyName="test"
+          companyName="moovez"
           positionName="Test Position"
           companyLink="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a"
           jobTools={["cake", "honey", "dancing"]}
