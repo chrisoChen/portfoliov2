@@ -17,7 +17,7 @@ import { ClassNames } from "@emotion/react";
 function InfoStack(props) {
   const {
     reverse = false,
-    projectTools = ["Python", "JavaScript"],
+    projectTools = ["Python", "JavaScript", "JavaScript", "JavaScript", "JavaScript", "JavaScript", "JavaScript", "JavaScript"],
     projectLinks = {
       github: "https://mui.com/material-ui/material-icons/?query=github",
       live: false,
@@ -56,7 +56,7 @@ function InfoStack(props) {
   ) : null;
 
   return (
-    <Box my={4}>
+    <Box mt={4}>
       <Stack
         justifyContent="space-between"
         alignItems="center"

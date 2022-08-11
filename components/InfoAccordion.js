@@ -55,9 +55,8 @@ function InfoAccordion(props) {
           {startDate} - {endDate}
         </Typography>
 
-        <Stack direction="row" mt={1} flexWrap="wrap" gap={1}>
-          <InfoChips infoList={jobTools} />
-        </Stack>
+        <InfoChips infoList={jobTools} />
+
         <Typography variant="body1" mt={2}>
           {jobDetails}
         </Typography>
