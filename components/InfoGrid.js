@@ -6,6 +6,7 @@ import { Container } from "@mui/system";
 import { Typography } from "@mui/material";
 
 import InfoChips from "../components/InfoChips";
+import InfoGridItem from "./InfoGridItem";
 
 function InfoGrid(props) {
   return (
@@ -32,58 +33,39 @@ function InfoGrid(props) {
           alignItems="flex-start"
           rowGap={2}
         >
-          <Grid item xs={11} md={3.6} mt={1}>
-            <Card
-              sx={{
-                minHeight: { xs: "18rem", md: "22rem" },
-                backgroundColor: "dark.main",
-              }}
-            >
-              <CardContent>
-                <Typography variant="h3">Project 1 Heading</Typography>
-                <InfoChips infoList={["React", "Selenium"]} />
-                <Typography variant="body1" mt={1}>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut,
-                  fugit!
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-          <Grid item xs={11} md={3.6} mt={1}>
-            <Card
-              sx={{
-                minHeight: { xs: "18rem", md: "22rem" },
-                backgroundColor: "dark.main",
-              }}
-            >
-              <CardContent>
-                <Typography variant="h3">Project 1 Heading</Typography>
-                <InfoChips infoList={["React", "Selenium"]} />
-                <Typography variant="body1" mt={1}>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut,
-                  fugit!
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-          <Grid item xs={11} md={3.6} mt={1}>
-            <Card
-              sx={{
-                minHeight: { xs: "18rem", md: "22rem" },
-                backgroundColor: "dark.main",
-              }}
-            >
-              <CardContent>
-                <Typography variant="h3">Project 1 Heading</Typography>
-                <InfoChips infoList={["React", "Selenium"]} />
-                <Typography variant="body1" mt={1}>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut,
-                  fugit!
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-          
+          <InfoGridItem
+            projectName="Project Name Heading"
+            projectTools={["React", "Selenium"]}
+            projectSummary="Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consequuntur voluptatum vero fugiat illo, distinctio quis libero
+            beatae ducimus iure rem!"
+            projectLinks={{
+              github:
+                "https://getpocket.com/explore/item/why-birds-survived-and-dinosaurs-went-extinct-after-an-asteroid-hit-earth?utm_source=pocket-newtab",
+            }}
+          />
+          <InfoGridItem
+            projectName="Project Name Heading"
+            projectTools={["React", "Selenium"]}
+            projectSummary="Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consequuntur voluptatum vero fugiat illo, distinctio quis libero
+            beatae ducimus iure rem!"
+            projectLinks={{
+              github:
+                "https://getpocket.com/explore/item/why-birds-survived-and-dinosaurs-went-extinct-after-an-asteroid-hit-earth?utm_source=pocket-newtab",
+            }}
+          />
+          <InfoGridItem
+            projectName="Project Name Heading"
+            projectTools={["React", "Selenium"]}
+            projectSummary="Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consequuntur voluptatum vero fugiat illo, distinctio quis libero
+            beatae ducimus iure rem!"
+            projectLinks={{
+              github:
+                "https://getpocket.com/explore/item/why-birds-survived-and-dinosaurs-went-extinct-after-an-asteroid-hit-earth?utm_source=pocket-newtab",
+            }}
+          />
         </Grid>
       </Container>
     </Box>
