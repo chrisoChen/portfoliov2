@@ -1,4 +1,10 @@
-import { Intro, About, Experience, Projects } from "../section_components";
+import {
+  Intro,
+  About,
+  Experience,
+  Projects,
+  OldProjects,
+} from "../section_components";
 import { Box } from "@mui/system";
 
 function Main() {
@@ -8,6 +14,7 @@ function Main() {
       <About />
       <Experience />
       <Projects />
+      <OldProjects />
     </Box>
   );
 }
