@@ -3,6 +3,10 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
+import DescriptionIcon from "@mui/icons-material/Description";
+import EmojiPeopleIcon from "@mui/icons-material/EmojiPeople";
+import BtnResume from "../components/BtnResume";
+import BtnContact from "../components/BtnContact";
 
 function Intro() {
   return (
@@ -18,8 +22,11 @@ function Intro() {
           alignItems="center"
           spacing={2}
         >
-          <Button size="large">Resume</Button>
-          <Button size="large">Say Hello</Button>
+          <BtnResume>Resume</BtnResume>
+          {/* <Button size="large" startIcon={<EmojiPeopleIcon />}>
+            Say Hello
+          </Button> */}
+          <BtnContact>Say Hello</BtnContact>
         </Stack>
       </Box>
     </Container>

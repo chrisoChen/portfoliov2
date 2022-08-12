@@ -4,6 +4,7 @@ import {
   Experience,
   Projects,
   OldProjects,
+  ClosingMessage,
 } from "../section_components";
 import { Box } from "@mui/system";
 
@@ -15,6 +16,7 @@ function Main() {
       <Experience />
       <Projects />
       <OldProjects />
+      <ClosingMessage />
     </Box>
   );
 }

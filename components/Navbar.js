@@ -71,7 +71,7 @@ function Navbar() {
             <Button
               size="large"
               startIcon={<DescriptionIcon />}
-              sx={{ display: { xs: "none", sm: "none", md: "flex" } }}
+              sx={{ display: { xs: "none", md: "flex" } }}
             >
               Resume
             </Button>
