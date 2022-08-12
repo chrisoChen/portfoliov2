@@ -4,7 +4,7 @@
   "description": "A portfolio showcasing my previous experience and projects.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --watch",
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
@@ -22,5 +22,11 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.3.0",
+    "jest": "^28.1.3",
+    "jest-environment-jsdom": "^28.1.3"
   }
 }
