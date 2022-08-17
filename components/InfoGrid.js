@@ -39,32 +39,12 @@ function InfoGrid(props) {
             projectSummary="Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Consequuntur voluptatum vero fugiat illo, distinctio quis libero
             beatae ducimus iure rem!"
-            projectLinks={{
-              github:
-                "https://getpocket.com/explore/item/why-birds-survived-and-dinosaurs-went-extinct-after-an-asteroid-hit-earth?utm_source=pocket-newtab",
-            }}
-          />
-          <InfoGridItem
-            projectName="Project Name Heading"
-            projectTools={["React", "Selenium"]}
-            projectSummary="Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Consequuntur voluptatum vero fugiat illo, distinctio quis libero
-            beatae ducimus iure rem!"
-            projectLinks={{
-              github:
-                "https://getpocket.com/explore/item/why-birds-survived-and-dinosaurs-went-extinct-after-an-asteroid-hit-earth?utm_source=pocket-newtab",
-            }}
-          />
-          <InfoGridItem
-            projectName="Project Name Heading"
-            projectTools={["React", "Selenium"]}
-            projectSummary="Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Consequuntur voluptatum vero fugiat illo, distinctio quis libero
-            beatae ducimus iure rem!"
-            projectLinks={{
-              github:
-                "https://getpocket.com/explore/item/why-birds-survived-and-dinosaurs-went-extinct-after-an-asteroid-hit-earth?utm_source=pocket-newtab",
-            }}
+            projectLinks={[
+              {
+                name: "Github",
+                url: "https://getpocket.com/explore/item/why-birds-survived-and-dinosaurs-went-extinct-after-an-asteroid-hit-earth?utm_source=pocket-newtab",
+              },
+            ]}
           />
         </Grid>
       </Container>

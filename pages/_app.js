@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import { ThemeProvider } from "@mui/material/styles";
 
 import theme from "../themes";
@@ -13,6 +14,7 @@ function MyApp({ Component, pageProps }) {
       <ThemeProvider theme={theme}>
         <Navbar />
         <Component {...pageProps} />
+        <Footer />
       </ThemeProvider>
     </>
   );

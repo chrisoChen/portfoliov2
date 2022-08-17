@@ -5,43 +5,21 @@ import { Stack } from "@mui/material";
 import InfoChips from "./InfoChips";
 import Link from "@mui/material/Link";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import iconAppend from "../util/iconAppend";
 
 function InfoGridItem(props) {
   const {
     projectName = "",
     projectTools = [],
     projectSummary = "",
-    projectLinks = {},
+    projectLinks = null,
   } = props;
 
-  const githubLink = projectLinks.github ? (
-    <Stack direction="row" spacing={0.5} alignItems="center" mt={1}>
-      <Link
-        href={projectLinks.github}
-        aria-label="Link to company's website."
-        target="_blank"
-        rel="noopener noreferrer"
-        color="secondary.main"
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          "&:hover": { opacity: "0.65", transition: "0.3s" },
-        }}
-      >
-        <GitHubIcon sx={{ color: "secondary.main" }} />
-      </Link>
-      <Link
-        href={projectLinks.github}
-        aria-label="Link to company's website."
-        target="_blank"
-        rel="noopener noreferrer"
-        color="secondary.main"
-        sx={{ display: "flex", alignItems: "center" }}
-      >
-        <GitHubIcon sx={{ color: "secondary.main" }} />
-      </Link>
-    </Stack>
-  ) : null;
+  const sourceLinks = projectLinks
+    ? iconAppend(projectLinks).map((link) => {
+        return link.linkIcon;
+      })
+    : null;
 
   return (
     <Grid item xs={11} md={3.6} mt={1}>
@@ -54,10 +32,10 @@ function InfoGridItem(props) {
         <CardContent>
           <Typography variant="h3">{projectName}</Typography>
           <InfoChips infoList={projectTools} />
-          <Typography variant="body1" mt={1}>
+          <Typography variant="body1" my={1}>
             {projectSummary}
           </Typography>
-          {githubLink}
+          {sourceLinks}
         </CardContent>
       </Card>
     </Grid>

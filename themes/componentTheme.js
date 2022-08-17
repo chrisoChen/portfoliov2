@@ -18,6 +18,22 @@ const componentTheme = {
           textTransform: "capitalize",
         },
       },
+      variants: [
+        {
+          props: { variant: "circle" },
+          style: {
+            width: "4.5rem",
+            height: "4.5rem",
+            borderRadius: "50%",
+            borderColor: colorTheme.palette.neutral.main,
+            backgroundColor: colorTheme.palette.neutral.main,
+            boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25);",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          },
+        },
+      ],
     },
     MuiLink: {
       styleOverrides: {
@@ -27,6 +43,9 @@ const componentTheme = {
       },
     },
     MuiSvgIcon: {
+      defaultProps: {
+        fontSize: "large",
+      },
       variants: [
         {
           props: { variant: "logo" },

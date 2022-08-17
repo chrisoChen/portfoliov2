@@ -10,10 +10,6 @@ function MainDocument() {
     <Html>
       <Head>
         <link rel="icon" type="image/x-icon" href="./favicon.ico" />
-        {/* <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-        /> */}
       </Head>
       <ThemeProvider theme={theme}>
         <Box component="body" sx={bodyStyle}>
