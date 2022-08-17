@@ -5,7 +5,7 @@ import { Stack } from "@mui/material";
 import InfoChips from "./InfoChips";
 import Link from "@mui/material/Link";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import iconAppend from "../util/iconAppend";
+import iconMap from "../util/iconMap";
 
 function InfoGridItem(props) {
   const {
@@ -16,8 +16,8 @@ function InfoGridItem(props) {
   } = props;
 
   const sourceLinks = projectLinks
-    ? iconAppend(projectLinks).map((link) => {
-        return link.linkIcon;
+    ? iconMap(projectLinks).map((link) => {
+        return link.icon;
       })
     : null;
 

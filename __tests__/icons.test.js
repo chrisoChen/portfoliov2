@@ -1,6 +1,6 @@
-import iconAppend from "../util/iconAppend";
 import { render, screen } from "@testing-library/react";
 import { v4 as uuidv4 } from "uuid";
+import iconMap from "../util/iconMap";
 
 let links;
 
@@ -18,22 +18,20 @@ beforeAll(() => {
 });
 
 describe("Link reducer", () => {
-  test("renders github logo icons", () => {
-    const linkLogos = iconAppend(links);
-
-    const githubLink = linkLogos.find((element) => element.name === "Github");
-    render(githubLink.linkIcon);
+  test("renders github logo icons with refactored function", () => {
+    const linkLogoes = iconMap(links);
+    const githubLink = linkLogoes.find((element) => element.name === "Github");
+    render(githubLink.icon);
     screen.getByTestId("GitHubIcon");
   });
 
   test("renders multiple logo icon links", () => {
-    const linkLogos = iconAppend(links);
-
+    const linkLogos = iconMap(links);
     render(
       linkLogos.map((link) => {
-        return <div key={uuidv4()}>{link.linkIcon}</div>;
+        return <div key={uuidv4()}>{link.icon}</div>;
       })
     );
-    screen.debug();
+    // screen.debug();
   });
 });

@@ -3,11 +3,11 @@ import { Button } from "@mui/material";
 import Stack from "@mui/material/Stack";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Link from "@mui/material/Link";
-import iconAppend from "../util/iconAppend";
+import iconMap from "../util/iconMap";
 import Copyright from "./Copyright";
 
 function Footer() {
-  const iconLinks = iconAppend(
+  const iconLinks = iconMap(
     [
       {
         name: "Github",
@@ -22,7 +22,7 @@ function Footer() {
   );
 
   const iconLinkBtns = iconLinks.map((link) => {
-    return link.linkIcon;
+    return link.icon;
   });
 
   return (
