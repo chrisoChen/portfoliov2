@@ -15,10 +15,11 @@ import CloseIcon from "@mui/icons-material/Close";
 
 import NavItems from "./NavItems";
 import NavDrawer from "./NavDrawer";
+import BtnResume from "./BtnResume";
 
 function Navbar() {
   const [drawerNavOpen, setDrawerNavOpen] = useState(false);
-  const navOptions = ["About", "Experience", "Projects", "Contact"];
+  const navOptions = ["About", "Experience", "Projects", "Archive", "Contact"];
 
   const handleDrawerToggle = () => {
     setDrawerNavOpen(!drawerNavOpen);
@@ -30,51 +31,50 @@ function Navbar() {
     listStyle: "none",
     padding: 0,
   };
-  
+
+  const ToolbarStyle = {
+    justifyContent: { xs: "center", md: "space-between" },
+    alignItems: "center",
+    padding: 0,
+    position: "relative",
+  };
+
+  const MobileDrawerButtonStyle = {
+    display: { xs: "static", md: "none" },
+    position: "absolute",
+    left: "0",
+  };
+
+  const MobileDrawerIconStyle = {
+    fontSize: { xs: "1.5rem", sm: "2rem" },
+  };
+
+  const NavbarResponsiveStyle = {
+    ...NavBoxSx,
+    ...{ display: { xs: "none", sm: "none", md: "flex" } },
+  };
+
+  const ResponsiveButtonStyle = {
+    display: { xs: "none", md: "flex" },
+  };
   return (
     <Box>
       <AppBar position="static" elevation={0} sx={{ py: 2 }}>
         <Container>
-          <Toolbar
-            disableGutters
-            component="ul"
-            sx={{
-              justifyContent: { xs: "center", md: "space-between" },
-              alignItems: "center",
-              padding: 0,
-              position: "relative",
-            }}
-          >
+          <Toolbar disableGutters component="ul" sx={ToolbarStyle}>
             <IconButton
               onClick={handleDrawerToggle}
               color="secondary"
-              sx={{
-                display: { xs: "static", md: "none" },
-                position: "absolute",
-                left: "0",
-              }}
+              sx={MobileDrawerButtonStyle}
             >
-              <MenuIcon sx={{ fontSize: { xs: "1.5rem", sm: "2rem" } }} />
+              <MenuIcon sx={MobileDrawerIconStyle} />
             </IconButton>
 
             <LogoIconBtn />
-            <Box
-              maxWidth="lg"
-              component="ul"
-              sx={{
-                ...NavBoxSx,
-                ...{ display: { xs: "none", sm: "none", md: "flex" } },
-              }}
-            >
+            <Box maxWidth="lg" component="ul" sx={NavbarResponsiveStyle}>
               <NavItems navOptions={navOptions} />
             </Box>
-            <Button
-              size="large"
-              startIcon={<DescriptionIcon />}
-              sx={{ display: { xs: "none", md: "flex" } }}
-            >
-              Resume
-            </Button>
+            <BtnResume style={ResponsiveButtonStyle}>Resume</BtnResume>
           </Toolbar>
         </Container>
       </AppBar>

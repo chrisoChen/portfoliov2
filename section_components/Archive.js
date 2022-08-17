@@ -8,15 +8,15 @@ import InfoGrid from "../components/InfoGrid";
 
 import InfoChips from "../components/InfoChips";
 
-function OldProjects() {
+function Archive() {
   return (
     <Container variant="section" sx={{ position: "relative" }}>
       <Typography variant="h2" sx={{ textAlign: "center" }}>
-        Previous Projects
+        Archive Projects
       </Typography>
       <InfoGrid />
     </Container>
   );
 }
 
-export default OldProjects;
+export default Archive;

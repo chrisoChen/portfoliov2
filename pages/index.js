@@ -3,8 +3,8 @@ import {
   About,
   Experience,
   Projects,
-  OldProjects,
-  ClosingMessage,
+  Archive,
+  Contact,
 } from "../section_components";
 import Navbar from "../components/Navbar";
 import { Box } from "@mui/system";
@@ -17,8 +17,8 @@ function Main() {
       <About />
       <Experience />
       <Projects />
-      <OldProjects />
-      <ClosingMessage />
+      <Archive />
+      <Contact />
     </Box>
   );
 }

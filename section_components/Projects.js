@@ -4,7 +4,7 @@ import InfoStack from "../components/InfoStack";
 
 function Projects() {
   return (
-    <Container variant="section">
+    <Container variant="section" id="Projects">
       <Typography variant="h2" gutterBottom sx={{ textAlign: "center" }}>
         Projects
       </Typography>
