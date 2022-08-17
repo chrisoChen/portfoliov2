@@ -30,7 +30,7 @@ function Navbar() {
     listStyle: "none",
     padding: 0,
   };
-
+  
   return (
     <Box>
       <AppBar position="static" elevation={0} sx={{ py: 2 }}>

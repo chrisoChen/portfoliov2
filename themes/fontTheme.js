@@ -49,6 +49,13 @@ const fontTheme = {
       fontWeight: "500",
       fontStyle: "normal",
     },
+    body2: {
+      color: colorTheme.palette.secondaryAlt.main,
+      fontSize: "1rem",
+      lineHeight: "28.13px",
+      fontWeight: "500",
+      fontStyle: "normal",
+    },
   },
 };
 

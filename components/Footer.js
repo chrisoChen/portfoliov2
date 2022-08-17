@@ -4,6 +4,7 @@ import Stack from "@mui/material/Stack";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Link from "@mui/material/Link";
 import iconAppend from "../util/iconAppend";
+import Copyright from "./Copyright";
 
 function Footer() {
   const iconLinks = iconAppend(
@@ -35,6 +36,7 @@ function Footer() {
       >
         {iconLinkBtns}
       </Stack>
+      <Copyright />
     </Container>
   );
 }

@@ -1,0 +1,44 @@
+{
+  "experience": [
+    {
+      "company": "Irdeto",
+      "role": "Jr. Software Developer",
+      "companyLink": "https://irdeto.com/",
+      "startDate": "September 2020",
+      "endDate": "September 2021",
+      "tools": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Python",
+        "Selenium",
+        "React",
+        "Redux",
+        "SASS",
+        "Django",
+        "MySQL",
+        "Docker",
+        "Chrome Extension API",
+        "AWS",
+        "Git"
+      ],
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."
+    },
+    {
+      "company": "moovez",
+      "role": "Software Developer Intern",
+      "companyLink": "https://www.linkedin.com/company/moovez/",
+      "startDate": "May 2020",
+      "endDate": "August 2020",
+      "tools": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "jQuery",
+        "Bootstrap",
+        "Affinity Photo"
+      ],
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."
+    }
+  ]
+}
