@@ -23,9 +23,6 @@ function Intro() {
           spacing={2}
         >
           <BtnResume>Resume</BtnResume>
-          {/* <Button size="large" startIcon={<EmojiPeopleIcon />}>
-            Say Hello
-          </Button> */}
           <BtnContact>Say Hello</BtnContact>
         </Stack>
       </Box>
