@@ -22,8 +22,15 @@ const componentTheme = {
         {
           props: { variant: "circle" },
           style: {
-            width: "4.5rem",
-            height: "4.5rem",
+            [tempTheme.breakpoints.up("md")]: {
+              width: "75px",
+              height: "75px",
+            },
+            width: "60px",
+            height: "60px",
+            padding: 0,
+            margin: 0,
+            fontSize: "3rem",
             borderRadius: "50%",
             borderColor: colorTheme.palette.neutral.main,
             backgroundColor: colorTheme.palette.neutral.main,

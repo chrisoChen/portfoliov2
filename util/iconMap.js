@@ -30,7 +30,11 @@ function iconMap(links, clickElement = null) {
 
     // Add clickElement as parent element to the icon
     if (clickElement) {
-      icon = cloneElement(clickElement, clickElement.props, icon);
+      icon = cloneElement(
+        clickElement,
+        { ...clickElement.props, title: `Link to my ${link.name}` },
+        icon
+      );
     }
 
     const linkedIcon = (

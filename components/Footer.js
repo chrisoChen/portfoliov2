@@ -5,37 +5,23 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import Link from "@mui/material/Link";
 import iconMap from "../util/iconMap";
 import Copyright from "./Copyright";
+import MediaLinks from "./MediaLinks";
 
 function Footer() {
-  const iconLinks = iconMap(
-    [
-      {
-        name: "Github",
-        url: "https://jestjs.io/docs/setup-teardown",
-      },
-      {
-        name: "LinkedIn",
-        url: "https://developer.mozilla.org/en-US/",
-      },
-    ],
-    <Button variant="circle" title="test" sx={{ color: "dark.main" }} />
-  );
-
-  const iconLinkBtns = iconLinks.map((link) => {
-    return link.icon;
-  });
+  const links = [
+    {
+      name: "Github",
+      url: "https://jestjs.io/docs/setup-teardown",
+    },
+    {
+      name: "LinkedIn",
+      url: "https://developer.mozilla.org/en-US/",
+    },
+  ];
 
   return (
     <Container variant="section">
-      <Stack
-        justifyContent="center"
-        alignItems="center"
-        gap={2}
-        flexWrap="wrap"
-        direction="row"
-      >
-        {iconLinkBtns}
-      </Stack>
+      <MediaLinks links={links} />
       <Copyright />
     </Container>
   );

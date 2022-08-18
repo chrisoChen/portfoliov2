@@ -7,6 +7,7 @@ import DescriptionIcon from "@mui/icons-material/Description";
 import EmojiPeopleIcon from "@mui/icons-material/EmojiPeople";
 import BtnResume from "../components/BtnResume";
 import BtnContact from "../components/BtnContact";
+import MediaLinks from "../components/MediaLinks";
 
 function Intro() {
   return (
@@ -16,6 +17,7 @@ function Intro() {
           <Typography variant="h1">Chris Chen</Typography>
           <Typography variant="h2">Software Developer</Typography>
         </Box>
+
         <Stack
           direction={{ xs: "column", md: "row" }}
           justifyContent="center"
@@ -25,6 +27,20 @@ function Intro() {
           <BtnResume>Resume</BtnResume>
           <BtnContact>Say Hello</BtnContact>
         </Stack>
+        <Box my={4}>
+          <MediaLinks
+            links={[
+              {
+                name: "Github",
+                url: "https://jestjs.io/docs/setup-teardown",
+              },
+              {
+                name: "LinkedIn",
+                url: "https://developer.mozilla.org/en-US/",
+              },
+            ]}
+          />
+        </Box>
       </Box>
     </Container>
   );

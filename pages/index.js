@@ -8,8 +8,11 @@ import {
 } from "../section_components";
 import Navbar from "../components/Navbar";
 import { Box } from "@mui/system";
+import { useRef } from "react";
 
 function Main() {
+  const scrollRef = useRef();
+  
   return (
     <Box>
       <Navbar />
