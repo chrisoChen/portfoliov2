@@ -17,7 +17,16 @@ import { ClassNames } from "@emotion/react";
 function InfoStack(props) {
   const {
     reverse = false,
-    projectTools = ["Python", "JavaScript", "JavaScript", "JavaScript", "JavaScript", "JavaScript", "JavaScript", "JavaScript"],
+    projectTools = [
+      "Python",
+      "JavaScript",
+      "JavaScript",
+      "JavaScript",
+      "JavaScript",
+      "JavaScript",
+      "JavaScript",
+      "JavaScript",
+    ],
     projectLinks = {
       github: "https://mui.com/material-ui/material-icons/?query=github",
       live: false,
@@ -88,7 +97,6 @@ function InfoStack(props) {
           <Image
             src={profilePic}
             alt="A cartoon portrait of the software developer, Chris Chen. Chris poses directly at the camera and his glasses have been colored yellow and turquoise for a heightened cartoon look."
-            priority
           />
         </Box>
       </Stack>

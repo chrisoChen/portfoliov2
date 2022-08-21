@@ -39,18 +39,17 @@ function NavDrawer(props) {
   );
 
   return (
-    <Box>
-      <Drawer
-        open={drawerNavOpen}
-        onClose={handleDrawerToggle}
-        ModalProps={{
-          keepMounted: true, // Better open performance on mobile.
-        }}
-        sx={{ display: { xs: "block", md: "none" } }}
-      >
-        {drawerContent}
-      </Drawer>
-    </Box>
+    <Drawer
+      open={drawerNavOpen}
+      onClose={handleDrawerToggle}
+      variant="persistent"
+      ModalProps={{
+        keepMounted: true, // Better open performance on mobile.
+      }}
+      sx={{ display: { xs: "block", md: "none" } }}
+    >
+      {drawerContent}
+    </Drawer>
   );
 }
 

@@ -8,9 +8,9 @@ import InfoGrid from "../components/InfoGrid";
 
 import InfoChips from "../components/InfoChips";
 
-function Archive() {
+function Archive({ sectionRef }) {
   return (
-    <Container variant="section" sx={{ position: "relative" }}>
+    <Container variant="section" sx={{ position: "relative" }} ref={sectionRef}>
       <Typography variant="h2" sx={{ textAlign: "center" }}>
         Archive Projects
       </Typography>

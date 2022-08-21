@@ -7,9 +7,9 @@ import { Divider } from "@mui/material";
 import Image from "next/image";
 import profilePic from "../public/cartoon-profile-chris.png";
 
-function About() {
+function About({ sectionRef }) {
   return (
-    <Container variant="section">
+    <Container variant="section" ref={sectionRef}>
       <Grid container direction={{ xs: "column", md: "row" }} rowGap={4}>
         <Grid item xs={12}>
           <Typography
@@ -43,7 +43,6 @@ function About() {
             <Image
               src={profilePic}
               alt="A cartoon portrait of the software developer, Chris Chen. Chris poses directly at the camera and his glasses have been colored yellow and turquoise for a heightened cartoon look."
-              priority
             />
           </Container>
         </Grid>

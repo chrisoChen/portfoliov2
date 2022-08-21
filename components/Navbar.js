@@ -16,11 +16,9 @@ import CloseIcon from "@mui/icons-material/Close";
 import NavItems from "./NavItems";
 import NavDrawer from "./NavDrawer";
 import BtnResume from "./BtnResume";
-import MediaLinks from "./MediaLinks";
 
-function Navbar() {
+function Navbar({ executeScroll, navbarOptions }) {
   const [drawerNavOpen, setDrawerNavOpen] = useState(false);
-  const navOptions = ["About", "Experience", "Projects", "Archive", "Contact"];
 
   const handleDrawerToggle = () => {
     setDrawerNavOpen(!drawerNavOpen);
@@ -58,8 +56,9 @@ function Navbar() {
   const ResponsiveButtonStyle = {
     display: { xs: "none", md: "flex" },
   };
+
   return (
-    <Box>
+    <>
       <AppBar position="static" elevation={0} sx={{ py: 2 }}>
         <Container>
           <Toolbar disableGutters component="ul" sx={ToolbarStyle}>
@@ -73,7 +72,7 @@ function Navbar() {
 
             <LogoIconBtn />
             <Box maxWidth="lg" component="ul" sx={NavbarResponsiveStyle}>
-              <NavItems navOptions={navOptions} />
+              <NavItems />
             </Box>
             <BtnResume style={ResponsiveButtonStyle}>Resume</BtnResume>
           </Toolbar>
@@ -84,9 +83,9 @@ function Navbar() {
         drawerNavOpen={drawerNavOpen}
         handleDrawerToggle={handleDrawerToggle}
       >
-        <NavItems navOptions={navOptions} />
+        <NavItems />
       </NavDrawer>
-    </Box>
+    </>
   );
 }
 

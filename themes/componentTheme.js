@@ -46,6 +46,7 @@ const componentTheme = {
       styleOverrides: {
         root: {
           fontFamily: fontTheme.typography.fontFamily,
+          cursor: "pointer",
         },
       },
     },
@@ -68,7 +69,7 @@ const componentTheme = {
     MuiDrawer: {
       styleOverrides: {
         root: {
-          display: { xs: "block", md: "none" },
+          //   display: { xs: "block", md: "none" },
           "& .MuiDrawer-paper": {
             boxSizing: "border-box",
             [tempTheme.breakpoints.up("sm")]: { width: "40vw" },

@@ -13,7 +13,7 @@ import ExpandCircleDownIcon from "@mui/icons-material/ExpandCircleDown";
 
 import InfoAccordion from "../components/InfoAccordion";
 // TODO: play around with theme settings for MuiAccordion-root, Mui-expanded, etc
-function Experience() {
+function Experience({ sectionRef }) {
   const [expanded, setExpanded] = useState(0);
 
   const handleChange = (panel) => (event, newExpanded) => {
@@ -21,7 +21,7 @@ function Experience() {
   };
 
   return (
-    <Container variant="section">
+    <Container variant="section" ref={sectionRef}>
       <Typography variant="h2" gutterBottom sx={{ textAlign: "center" }}>
         Experience
       </Typography>

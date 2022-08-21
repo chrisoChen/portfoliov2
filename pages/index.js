@@ -1,28 +1,23 @@
-import {
-  Intro,
-  About,
-  Experience,
-  Projects,
-  Archive,
-  Contact,
-} from "../section_components";
 import Navbar from "../components/Navbar";
-import { Box } from "@mui/system";
-import { useRef } from "react";
+import { ScrollProvider } from "../context/ScrollContext";
 
 function Main() {
-  const scrollRef = useRef();
-  
+  // Order matters: first element in list is used as intro section
+  const sections = [
+    "Intro",
+    "About",
+    "Experience",
+    "Projects",
+    "Archive",
+    "Contact",
+  ];
+
   return (
-    <Box>
-      <Navbar />
-      <Intro />
-      <About />
-      <Experience />
-      <Projects />
-      <Archive />
-      <Contact />
-    </Box>
+    <>
+      <ScrollProvider sections={sections}>
+        <Navbar />
+      </ScrollProvider>
+    </>
   );
 }
 

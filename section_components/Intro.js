@@ -9,9 +9,9 @@ import BtnResume from "../components/BtnResume";
 import BtnContact from "../components/BtnContact";
 import MediaLinks from "../components/MediaLinks";
 
-function Intro() {
+function Intro({ sectionRef }) {
   return (
-    <Container sx={{ textAlign: "center" }} variant="section">
+    <Container sx={{ textAlign: "center" }} variant="section" ref={sectionRef}>
       <Box>
         <Box my={5}>
           <Typography variant="h1">Chris Chen</Typography>
