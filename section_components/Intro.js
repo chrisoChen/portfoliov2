@@ -1,10 +1,7 @@
 import { Typography } from "@mui/material";
 import Container from "@mui/material/Container";
-import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
-import DescriptionIcon from "@mui/icons-material/Description";
-import EmojiPeopleIcon from "@mui/icons-material/EmojiPeople";
 import BtnResume from "../components/BtnResume";
 import BtnContact from "../components/BtnContact";
 import MediaLinks from "../components/MediaLinks";

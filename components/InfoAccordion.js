@@ -21,6 +21,7 @@ function InfoAccordion(props) {
     endDate = "",
     expanded,
     handleChange = () => null,
+    idKey,
   } = props;
 
   return (
@@ -47,7 +48,7 @@ function InfoAccordion(props) {
               sx={{ display: "flex", alignItems: "center" }}
             >
               {companyName}
-              <OpenInNewIcon sx={{ color: "secondary.main", ml: 0.5 }} />
+              <OpenInNewIcon fontSize="medium" sx={{ color: "secondary.main", ml: 0.5 }} />
             </Link>
           </Typography>
         </Stack>

@@ -20,7 +20,7 @@ function SectionComponents(sections) {
 
     return <SectionComponent sectionRef={sectionRef} key={uuidv4()} />;
   });
-  
+
   return [sectionComponents, navbarOptions];
 }
 

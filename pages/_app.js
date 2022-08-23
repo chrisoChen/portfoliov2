@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { ThemeProvider } from "@mui/material/styles";
 
@@ -12,7 +11,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
       <ThemeProvider theme={theme}>
-        <Component {...pageProps} />
+        <Component {...pageProps}></Component>
         <Footer />
       </ThemeProvider>
     </>

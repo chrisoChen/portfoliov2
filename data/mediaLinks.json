@@ -1,0 +1,20 @@
+{
+  "mediaLinks": [
+    {
+      "name": "Github",
+      "url": "https://github.com/chrisoChen"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/chrischentan/"
+    },
+    {
+      "name": "email",
+      "url": "mailto:chrischentan@hotmail.com"
+    },
+    {
+      "name": "Medium",
+      "url": "https://medium.com/@christochen16"
+    }
+  ]
+}

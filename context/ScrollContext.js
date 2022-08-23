@@ -17,7 +17,7 @@ function ScrollProvider(props) {
   return (
     <ScrollContext.Provider value={scrollValue}>
       {children}
-      <Suspense fallback={<CircularProgress color="dark" />}>
+      <Suspense fallback={<CircularProgress color="secondaryAlt" />}>
         {sectionComponents}
       </Suspense>
     </ScrollContext.Provider>
