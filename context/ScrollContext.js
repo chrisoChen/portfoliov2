@@ -1,6 +1,5 @@
-import { createContext, Suspense } from "react";
+import { createContext } from "react";
 import { executeScroll, SectionComponents } from "../util/sectionScroll";
-import CircularProgress from "@mui/material/CircularProgress";
 
 const ScrollContext = createContext();
 
@@ -17,9 +16,7 @@ function ScrollProvider(props) {
   return (
     <ScrollContext.Provider value={scrollValue}>
       {children}
-      <Suspense fallback={<CircularProgress color="secondaryAlt" />}>
-        {sectionComponents}
-      </Suspense>
+      {sectionComponents}
     </ScrollContext.Provider>
   );
 }

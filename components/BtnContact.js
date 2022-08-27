@@ -1,16 +1,22 @@
 import { Button } from "@mui/material";
 import { Link } from "@mui/material";
 import EmailIcon from "@mui/icons-material/Email";
+import { MediaLinksContext } from "../context/MediaLinksContext";
+import { useContext } from "react";
 
 function BtnContact(props) {
   const { children } = props;
+  const mediaLinks = useContext(MediaLinksContext);
+  const emailLink = mediaLinks.find(
+    (element) => element.name.toLowerCase() === "email"
+  );
 
   return (
     <Button
       size="large"
       startIcon={<EmailIcon />}
       rel="noopener noreferrer"
-      href={`mailto:test@example.com`}
+      href={emailLink.url}
       target="_blank"
     >
       {children}
@@ -19,16 +25,3 @@ function BtnContact(props) {
 }
 
 export default BtnContact;
-
-{
-  /* <Link
-href="/data/chris-chen-resume.pdf"
-target="_blank"
-rel="noopener noreferrer"
-underline="none"
->
-<Button size="large" startIcon={<DescriptionIcon />} sx={style}>
-  {children}
-</Button>
-</Link> */
-}

@@ -8,9 +8,6 @@ import endpoints from "../util/endpoints";
 
 function Main(props) {
   const { sections = [], mediaLinks = [], experience = [] } = props;
-  const sectionData = {
-    ...experience,
-  };
 
   return (
     <>

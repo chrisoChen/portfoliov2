@@ -1,5 +1,7 @@
-import { useRef, lazy } from "react";
+import { lazy, Suspense, createRef } from "react";
 import { v4 as uuidv4 } from "uuid";
+import { CircularProgress } from "@mui/material";
+import { Box } from "@mui/material";
 
 function executeScroll(e, sectionRef) {
   // Fixes issue where clicking on navitems jumps back to navbar
@@ -14,11 +16,22 @@ function SectionComponents(sections) {
     const SectionComponent = lazy(() =>
       import("../section_components/" + componentName)
     );
+    const sectionRef = createRef();
 
-    const sectionRef = useRef();
     navbarOptions.push({ name: componentName, sectionRef: sectionRef });
 
-    return <SectionComponent sectionRef={sectionRef} key={uuidv4()} />;
+    return (
+      <Box
+        id={`${componentName.toLowerCase()}-section`}
+        component="section"
+        ref={sectionRef}
+        key={uuidv4()}
+      >
+        <Suspense fallback={<CircularProgress color="secondaryAlt" />}>
+          <SectionComponent key={uuidv4()} sectionRef={sectionRef} />
+        </Suspense>
+      </Box>
+    );
   });
 
   return [sectionComponents, navbarOptions];

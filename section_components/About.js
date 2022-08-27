@@ -1,15 +1,12 @@
 import { Container } from "@mui/material";
-import { Stack } from "@mui/material";
 import { Grid } from "@mui/material";
 import { Typography } from "@mui/material";
-import { Box } from "@mui/material";
-import { Divider } from "@mui/material";
 import Image from "next/image";
 import profilePic from "../public/cartoon-profile-chris.png";
 
 function About({ sectionRef }) {
   return (
-    <Container variant="section" ref={sectionRef}>
+    <Container variant="section">
       <Grid container direction={{ xs: "column", md: "row" }} rowGap={4}>
         <Grid item xs={12}>
           <Typography

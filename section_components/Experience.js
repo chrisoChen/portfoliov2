@@ -4,13 +4,15 @@ import { Typography } from "@mui/material";
 import { Card } from "@mui/material";
 import { ExperienceContext } from "../context/ExperienceContext";
 import { useContext } from "react";
-import { v4 as uuidv4 } from "uuid";
 import InfoAccordion from "../components/InfoAccordion";
+import useIntersectionObserver from "../hooks/useIntersectionObserver";
 
 function Experience(props) {
   const experience = useContext(ExperienceContext);
-  const { sectionRef } = props;
+  const { sectionRef = null } = props;
   const [expanded, setExpanded] = useState(0);
+
+  const isSectionVisible = useIntersectionObserver(sectionRef);
 
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
@@ -18,7 +20,7 @@ function Experience(props) {
 
   const experienceAccordions = experience.map((exp, index) => {
     return (
-      // Using uuidv4() as map key removes animation for accordion
+      // Using uuidv4() as key removes accordion expanding animation 
       <InfoAccordion
         expanded={expanded}
         handleChange={() => handleChange(index)}
@@ -42,12 +44,14 @@ function Experience(props) {
   };
 
   return (
-    <Container variant="section" ref={sectionRef}>
-      <Typography variant="h2" gutterBottom sx={{ textAlign: "center" }}>
-        Experience
-      </Typography>
-      <Card sx={backgroundStyle}>{experienceAccordions}</Card>
-    </Container>
+    isSectionVisible && (
+      <Container variant="section">
+        <Typography variant="h2" gutterBottom sx={{ textAlign: "center" }}>
+          Experience
+        </Typography>
+        <Card sx={backgroundStyle}>{experienceAccordions}</Card>
+      </Container>
+    )
   );
 }
 
