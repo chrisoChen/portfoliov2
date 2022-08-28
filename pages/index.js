@@ -14,7 +14,6 @@ function Main(props) {
       <ExperienceProvider experience={experience}>
         <MediaLinksProvider mediaLinks={mediaLinks}>
           <ScrollProvider sections={sections}>
-            <Navbar />
           </ScrollProvider>
         </MediaLinksProvider>
       </ExperienceProvider>
