@@ -4,13 +4,13 @@ import { Box } from "@mui/system";
 import BtnContact from "../components/BtnContact";
 import MediaLinks from "../components/MediaLinks";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
-import Grow from "@mui/material/Grow";
+import Fade from "@mui/material/Fade";
 
 function ClosingMessage({ sectionRef }) {
   const isSectionVisible = useIntersectionObserver(sectionRef);
 
   return (
-    <Grow in={isSectionVisible}>
+    <Fade in={isSectionVisible}>
       <Container variant="section" maxWidth="md" sx={{ textAlign: "center" }}>
         <Typography variant="h2">Next Steps</Typography>
         <Typography variant="body1" mt={1} mb={3}>
@@ -22,7 +22,7 @@ function ClosingMessage({ sectionRef }) {
           <MediaLinks />
         </Box>
       </Container>
-    </Grow>
+    </Fade>
   );
 }
 
