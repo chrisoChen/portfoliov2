@@ -6,10 +6,10 @@ import { ExperienceContext } from "../context/ExperienceContext";
 import { useContext } from "react";
 import InfoAccordion from "../components/InfoAccordion";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
+import Slide from "@mui/material/Slide";
 
-function Experience(props) {
+function Experience({ sectionRef }) {
   const experience = useContext(ExperienceContext);
-  const { sectionRef = null } = props;
   const [expanded, setExpanded] = useState(0);
 
   const isSectionVisible = useIntersectionObserver(sectionRef);
@@ -20,7 +20,7 @@ function Experience(props) {
 
   const experienceAccordions = experience.map((exp, index) => {
     return (
-      // Using uuidv4() as key removes accordion expanding animation 
+      // Using uuidv4() as key removes accordion expanding animation
       <InfoAccordion
         expanded={expanded}
         handleChange={() => handleChange(index)}
@@ -44,14 +44,17 @@ function Experience(props) {
   };
 
   return (
-    isSectionVisible && (
+    <Slide
+      in={isSectionVisible}
+      direction="right"
+    >
       <Container variant="section">
         <Typography variant="h2" gutterBottom sx={{ textAlign: "center" }}>
           Experience
         </Typography>
         <Card sx={backgroundStyle}>{experienceAccordions}</Card>
       </Container>
-    )
+    </Slide>
   );
 }
 

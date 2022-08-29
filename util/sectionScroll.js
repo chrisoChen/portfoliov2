@@ -16,7 +16,7 @@ function SectionComponents(sections) {
     const SectionComponent = lazy(() =>
       import("../section_components/" + componentName)
     );
-    const sectionRef = createRef();
+    let sectionRef = createRef();
 
     navbarOptions.push({ name: componentName, sectionRef: sectionRef });
 
@@ -26,6 +26,12 @@ function SectionComponents(sections) {
         component="section"
         ref={sectionRef}
         key={uuidv4()}
+        sx={{
+          minHeight: { xs: "auto", md: "50vh" },
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
       >
         <Suspense fallback={<CircularProgress color="secondaryAlt" />}>
           <SectionComponent key={uuidv4()} sectionRef={sectionRef} />

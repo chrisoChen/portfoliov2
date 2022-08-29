@@ -7,35 +7,42 @@ import BtnContact from "../components/BtnContact";
 import MediaLinks from "../components/MediaLinks";
 import Navbar from "../components/Navbar";
 import { Grid } from "@mui/material";
-function Intro() {
+import useIntersectionObserver from "../hooks/useIntersectionObserver";
+import Slide from "@mui/material/Slide";
+
+function Intro({ sectionRef }) {
+  const isSectionVisible = useIntersectionObserver(sectionRef);
+
   return (
-    <Grid container direction="column" sx={{ minHeight: "100vh" }}>
-      <Grid item>
-        <Navbar />
-      </Grid>
-      <Grid item my="auto">
-        <Container sx={{ textAlign: "center" }} variant="section">
-          <Box>
-            <Box my={5}>
-              <Typography variant="h1">Chris Chen</Typography>
-              <Typography variant="h2">Software Developer</Typography>
+    <Slide in={isSectionVisible} direction="down">
+      <Grid container direction="column" sx={{ minHeight: "100vh" }}>
+        <Grid item>
+          <Navbar />
+        </Grid>
+        <Grid item my="auto">
+          <Container sx={{ textAlign: "center" }} variant="section">
+            <Box>
+              <Box my={5}>
+                <Typography variant="h1">Chris Chen</Typography>
+                <Typography variant="h2">Software Developer</Typography>
+              </Box>
+              <Stack
+                direction={{ xs: "column", md: "row" }}
+                justifyContent="center"
+                alignItems="center"
+                spacing={2}
+              >
+                <BtnResume>Resume</BtnResume>
+                <BtnContact>Say Hello</BtnContact>
+              </Stack>
+              <Box my={4}>
+                <MediaLinks />
+              </Box>
             </Box>
-            <Stack
-              direction={{ xs: "column", md: "row" }}
-              justifyContent="center"
-              alignItems="center"
-              spacing={2}
-            >
-              <BtnResume>Resume</BtnResume>
-              <BtnContact>Say Hello</BtnContact>
-            </Stack>
-            <Box my={4}>
-              <MediaLinks />
-            </Box>
-          </Box>
-        </Container>
+          </Container>
+        </Grid>
       </Grid>
-    </Grid>
+    </Slide>
   );
 }
 

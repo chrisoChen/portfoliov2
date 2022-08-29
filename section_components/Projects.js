@@ -1,16 +1,22 @@
 import { Container } from "@mui/system";
 import { Typography } from "@mui/material";
 import InfoStack from "../components/InfoStack";
+import useIntersectionObserver from "../hooks/useIntersectionObserver";
+import Slide from "@mui/material/Slide";
 
 function Projects({ sectionRef }) {
+  const isSectionVisible = useIntersectionObserver(sectionRef);
+
   return (
-    <Container variant="section" id="Projects" ref={sectionRef}>
-      <Typography variant="h2" gutterBottom sx={{ textAlign: "center" }}>
-        Projects
-      </Typography>
-      <InfoStack reverse={false} />
-      <InfoStack reverse={true} />
-    </Container>
+    <Slide in={isSectionVisible} direction="right">
+      <Container variant="section">
+        <Typography variant="h2" sx={{ textAlign: "center" }}>
+          Projects
+        </Typography>
+        <InfoStack reverse={false} />
+        <InfoStack reverse={true} />
+      </Container>
+    </Slide>
   );
 }
 

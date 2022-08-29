@@ -4,8 +4,14 @@ import { ThemeProvider } from "@mui/material/styles";
 import theme from "../themes";
 
 function MainDocument() {
-  const bodyStyle = { m: 0, backgroundColor: "primary.main" };
-  
+  const bodyStyle = {
+    // Fixes horizontal overflow issue from MUI Slide component.
+    // Mobile still has overflow issue when sliding from the left
+    overflowX: "hidden",
+    m: 0,
+    backgroundColor: "primary.main",
+  };
+
   return (
     <Html>
       <Head>

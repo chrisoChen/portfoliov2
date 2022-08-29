@@ -1,21 +1,21 @@
 import { Container } from "@mui/system";
 import { Typography } from "@mui/material";
-import { Paper } from "@mui/material";
-import { Box } from "@mui/material";
-import { Card, CardActions, CardContent, CardHeader } from "@mui/material";
-import { Grid } from "@mui/material";
 import InfoGrid from "../components/InfoGrid";
-
-import InfoChips from "../components/InfoChips";
+import useIntersectionObserver from "../hooks/useIntersectionObserver";
+import Slide from "@mui/material/Slide";
 
 function Archive({ sectionRef }) {
+  const isSectionVisible = useIntersectionObserver(sectionRef);
+
   return (
-    <Container variant="section" sx={{ position: "relative" }} ref={sectionRef}>
-      <Typography variant="h2" sx={{ textAlign: "center" }}>
-        Archive Projects
-      </Typography>
-      <InfoGrid />
-    </Container>
+    <Slide in={isSectionVisible} direction="right">
+      <Container variant="section">
+        <Typography variant="h2" sx={{ textAlign: "center" }}>
+          Archive Projects
+        </Typography>
+        <InfoGrid />
+      </Container>
+    </Slide>
   );
 }
 

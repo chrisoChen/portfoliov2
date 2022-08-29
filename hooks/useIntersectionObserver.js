@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 // Source: https://letsbuildui.dev/articles/how-to-lazy-load-react-components
 const useIntersectionObserver = (
   reference,
-  options = { rootMargin: "-300px", threshold: 1.0 }
+  options = {threshold: 0.35 }
 ) => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -12,6 +12,7 @@ const useIntersectionObserver = (
     const handleIntersect = (entries, observer) => {
       if (entries[0].isIntersecting) {
         console.log("am visible");
+        console.log(entries[0]);
         setIsVisible(true);
         observer.unobserve(entries[0].target);
         observer.disconnect();
@@ -19,7 +20,7 @@ const useIntersectionObserver = (
     };
 
     // Create the observer, passing in the callback
-    const observer = new IntersectionObserver(handleIntersect);
+    const observer = new IntersectionObserver(handleIntersect, options);
 
     // If we have a ref value, start observing it
     if (reference) {
