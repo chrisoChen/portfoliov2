@@ -5,14 +5,14 @@ import { List } from "@mui/material";
 import { Drawer } from "@mui/material/";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
-
 import LogoIconBtn from "./LogoIconBtn";
-
+import HexagonDivider from "./HexagonDivider";
+import Stack from "@mui/material";
 function NavDrawer(props) {
   const { drawerNavOpen, handleDrawerToggle, children } = props;
 
   const drawerContent = (
-    <Box onClick={handleDrawerToggle} color="primary">
+    <Box onClick={handleDrawerToggle} sx={{ minHeight: "100%" }}>
       <Container
         sx={{
           display: "flex",
@@ -21,6 +21,7 @@ function NavDrawer(props) {
       >
         <IconButton
           aria-label="Close Button"
+          onClick={handleDrawerToggle}
           sx={{
             my: 2,
             alignSelf: "flex-end",
@@ -32,7 +33,7 @@ function NavDrawer(props) {
         <Box sx={{ my: 2, alignSelf: "center" }}>
           <LogoIconBtn />
         </Box>
-        <Divider />
+        <HexagonDivider />
         <List sx={{ py: 3 }}>{children}</List>
       </Container>
     </Box>

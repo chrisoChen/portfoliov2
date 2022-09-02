@@ -74,7 +74,7 @@ const componentTheme = {
             boxSizing: "border-box",
             [tempTheme.breakpoints.up("sm")]: { width: "40vw" },
             width: "80vw",
-            backgroundColor: colorTheme.palette.primary.main,
+            backgroundColor: colorTheme.palette.dark.main,
           },
         },
       },
