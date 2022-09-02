@@ -11,8 +11,6 @@ const useIntersectionObserver = (
   useEffect(() => {
     const handleIntersect = (entries, observer) => {
       if (entries[0].isIntersecting) {
-        console.log("am visible");
-        console.log(entries[0]);
         setIsVisible(true);
         observer.unobserve(entries[0].target);
         observer.disconnect();
