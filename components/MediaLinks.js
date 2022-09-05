@@ -8,7 +8,7 @@ function MediaLinks({
   clickElement = <Button variant="circle" sx={{ color: "dark.main" }} />,
 }) {
   const { mediaLinks = [] } = useContext(SectionDataContext);
-  const iconLinks = iconMap(mediaLinks, clickElement);
+  const iconLinks = iconMap(mediaLinks, clickElement, "My");
   const iconLinkBtns = iconLinks.map((link) => {
     return link.icon;
   });

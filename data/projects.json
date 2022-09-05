@@ -1,9 +1,8 @@
 {
   "projects": [
     {
-      "name": "Virtulib",
-      "repoUrl": "https://github.com/chris-personal-projects/virtulib-project",
-      "tools": [
+      "projectName": "Virtulib",
+      "projectTools": [
         "C#",
         "WPF",
         "Material Design",
@@ -13,8 +12,14 @@
         "Python",
         "Git"
       ],
-      "imageUrl": "../public/proj-imgs/virtulib-sample.jpg",
-      "description": ""
+      "projectImageUrl": "/proj-imgs/virtulib-sample.jpg",
+      "projectDescription": "lorem ipsum",
+      "projectLinks": [
+        {
+          "name": "Github",
+          "url": "https://github.com/chris-personal-projects/virtulib-project"
+        }
+      ]
     }
   ]
 }

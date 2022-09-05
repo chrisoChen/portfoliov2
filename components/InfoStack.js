@@ -1,68 +1,37 @@
 import { Stack } from "@mui/material";
-import { Container } from "@mui/material";
 import { Typography } from "@mui/material";
 import { Box } from "@mui/material";
 import Image from "next/image";
 import profilePic from "../public/proj-imgs/virtulib-sample.jpg";
 import InfoChips from "./InfoChips";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import Link from "@mui/material/Link";
-import { ConstructionOutlined } from "@mui/icons-material";
 import { Divider } from "@mui/material";
 import HexagonIcon from "./HexagonIcon";
 import { useTheme } from "@mui/material";
-import { ClassNames } from "@emotion/react";
+import iconMap from "../util/iconMap";
+import { v4 as uuidv4 } from "uuid";
 
 function InfoStack(props) {
   const {
+    projectName = "",
+    projectTools = [],
+    projectImageUrl = "",
+    projectDescription = "",
+    projectLinks = [],
     reverse = false,
-    projectTools = [
-      "Python",
-      "JavaScript",
-      "JavaScript",
-      "JavaScript",
-      "JavaScript",
-      "JavaScript",
-      "JavaScript",
-      "JavaScript",
-    ],
-    projectLinks = {
-      github: "https://mui.com/material-ui/material-icons/?query=github",
-      live: false,
-    },
   } = props;
 
   const theme = useTheme();
 
-  const githubLink = projectLinks.github ? (
-    <Stack direction="row" spacing={0.5} alignItems="center" mt={1}>
-      <Link
-        href={projectLinks.github}
-        aria-label="Link to company's website."
-        target="_blank"
-        rel="noopener noreferrer"
-        color="secondary.main"
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          "&:hover": { opacity: "0.65", transition: "0.3s" },
-        }}
-      >
-        <GitHubIcon sx={{ color: "secondary.main" }} />
-      </Link>
-      <Link
-        href={projectLinks.github}
-        aria-label="Link to company's website."
-        target="_blank"
-        rel="noopener noreferrer"
-        color="secondary.main"
-        sx={{ display: "flex", alignItems: "center" }}
-      >
-        <GitHubIcon sx={{ color: "secondary.main" }} />
-      </Link>
-    </Stack>
-  ) : null;
+  const clickLinks = iconMap(projectLinks, <Box />, projectName);
+  const projectClickLinks = clickLinks.map((link) => {
+    return (
+      <Box id={`${projectName}-${link.name.toLowerCase()}-link`} key={uuidv4()}>
+        {link.icon}
+      </Box>
+    );
+  });
 
   return (
     <Box mt={4}>
@@ -73,19 +42,22 @@ function InfoStack(props) {
         gap={5}
       >
         <Box sx={{ width: { xs: "100%", md: "40%" } }}>
-          <Typography variant="h3">Project 1 Heading</Typography>
+          <Typography variant="h3">{projectName}</Typography>
           <Box mt={1}>
             <InfoChips infoList={projectTools} />
           </Box>
           <Typography variant="body1" mt={3}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-            deleniti ullam ut nemo pariatur facilis perferendis quidem illo
-            quam! Rerum, quibusdam odio accusamus, ea exercitationem vero
-            tempora placeat incidunt numquam ut porro quos? Est aspernatur
-            eligendi aliquid dolorem, id, labore culpa iure laudantium
-            repellendus natus nostrum dicta esse fugit iste.
+            {projectDescription}
           </Typography>
-          {githubLink}
+          <Stack
+            className="project-link-stack"
+            direction="row"
+            spacing={0.5}
+            alignItems="center"
+            mt={1}
+          >
+            {projectClickLinks}
+          </Stack>
         </Box>
         <Box
           sx={{
@@ -94,10 +66,7 @@ function InfoStack(props) {
             display: { xs: "none", md: "block" },
           }}
         >
-          <Image
-            src={profilePic}
-            alt="A cartoon portrait of the software developer, Chris Chen. Chris poses directly at the camera and his glasses have been colored yellow and turquoise for a heightened cartoon look."
-          />
+          <Image src={projectImageUrl} width="450" height="350" />
         </Box>
       </Stack>
       <Divider

@@ -5,10 +5,26 @@ import useIntersectionObserver from "../hooks/useIntersectionObserver";
 import Slide from "@mui/material/Slide";
 import { SectionDataContext } from "../context/SectionDataContext";
 import { useContext } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 function Projects({ sectionRef }, props) {
   const isSectionVisible = useIntersectionObserver(sectionRef);
   const { projects = [] } = useContext(SectionDataContext);
+  const reverseFactor = 2;
+
+  const projectsStack = projects.map((project, index) => {
+    return (
+      <InfoStack
+        projectName={project.projectName}
+        projectTools={project.projectTools}
+        projectImageUrl={project.projectImageUrl}
+        projectDescription={project.projectDescription}
+        projectLinks={project.projectLinks}
+        reverse={index % reverseFactor ? true : false}
+        key={uuidv4()}
+      />
+    );
+  });
 
   return (
     <Slide in={isSectionVisible} direction="right">
@@ -16,8 +32,7 @@ function Projects({ sectionRef }, props) {
         <Typography variant="h2" sx={{ textAlign: "center" }}>
           Projects
         </Typography>
-        <InfoStack reverse={false} />
-        <InfoStack reverse={true} />
+        {projectsStack}
       </Container>
     </Slide>
   );
