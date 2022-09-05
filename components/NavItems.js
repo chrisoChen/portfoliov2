@@ -5,13 +5,14 @@ import MuiLink from "@mui/material/Link";
 import { useContext } from "react";
 import { ScrollContext } from "../context/ScrollContext";
 
-function NavItems() {
+function NavItems(props) {
+  const { stack = false } = props;
   const { executeScroll = () => null, navbarOptions = [] } =
     useContext(ScrollContext);
 
   const navItems = navbarOptions.map((option) => {
     return (
-      <Typography variant="body1" component="li" key={uuidv4()}>
+      <Typography variant="h4" component="li" key={uuidv4()} mb={stack ? 1 : 0}>
         <MuiLink
           color="secondary"
           underline="hover"

@@ -53,10 +53,6 @@ function Navbar({ executeScroll, navbarOptions }) {
     ...{ display: { xs: "none", sm: "none", md: "flex" } },
   };
 
-  const ResponsiveButtonStyle = {
-    display: { xs: "none", md: "flex" },
-  };
-
   return (
     <>
       <AppBar position="static" elevation={0} sx={{ py: 2 }}>
@@ -74,7 +70,6 @@ function Navbar({ executeScroll, navbarOptions }) {
             <Box maxWidth="lg" component="ul" sx={NavbarResponsiveStyle}>
               <NavItems />
             </Box>
-            <BtnResume style={ResponsiveButtonStyle}>Resume</BtnResume>
           </Toolbar>
         </Container>
       </AppBar>
@@ -83,7 +78,7 @@ function Navbar({ executeScroll, navbarOptions }) {
         drawerNavOpen={drawerNavOpen}
         handleDrawerToggle={handleDrawerToggle}
       >
-        <NavItems />
+        <NavItems stack={true} />
       </NavDrawer>
     </>
   );
