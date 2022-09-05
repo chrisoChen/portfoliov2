@@ -1,8 +1,7 @@
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
-import MediumIcon from "./MediumIcon";
-import BookIcon from "@mui/icons-material/Book";
+import RateReviewIcon from '@mui/icons-material/RateReview';
 import LinkIcon from "@mui/icons-material/Link";
 import Link from "@mui/material/Link";
 import { cloneElement } from "react";
@@ -17,7 +16,7 @@ function iconReducer(link) {
     case "email":
       return <EmailIcon />;
     case "medium blog":
-      return <BookIcon />;
+      return <RateReviewIcon />;
     default:
       return <LinkIcon />;
   }
