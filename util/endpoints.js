@@ -3,7 +3,7 @@ const endpoints = {
   // about: "data/about.json",
   media: "data/mediaLinks.json",
   experience: "data/experience.json",
-  // projects: "data/projects.json",
+  projects: "data/projects.json",
 };
 
 export default endpoints;

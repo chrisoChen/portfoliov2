@@ -2,14 +2,14 @@ import { useState } from "react";
 import { Container } from "@mui/system";
 import { Typography } from "@mui/material";
 import { Card } from "@mui/material";
-import { ExperienceContext } from "../context/ExperienceContext";
+import { SectionDataContext } from "../context/SectionDataContext";
 import { useContext } from "react";
 import InfoAccordion from "../components/InfoAccordion";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
 import Slide from "@mui/material/Slide";
 
 function Experience({ sectionRef }) {
-  const experience = useContext(ExperienceContext);
+  const { experience = [] } = useContext(SectionDataContext);
   const [expanded, setExpanded] = useState(null);
 
   const isSectionVisible = useIntersectionObserver(sectionRef);
@@ -44,10 +44,7 @@ function Experience({ sectionRef }) {
   };
 
   return (
-    <Slide
-      in={isSectionVisible}
-      direction="right"
-    >
+    <Slide in={isSectionVisible} direction="right">
       <Container variant="section">
         <Typography variant="h2" gutterBottom sx={{ textAlign: "center" }}>
           Experience

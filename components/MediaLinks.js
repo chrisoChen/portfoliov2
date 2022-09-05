@@ -2,17 +2,16 @@ import { Stack } from "@mui/material";
 import { Button } from "@mui/material";
 import iconMap from "../util/iconMap";
 import { useContext } from "react";
-import { MediaLinksContext } from "../context/MediaLinksContext";
+import { SectionDataContext } from "../context/SectionDataContext";
 
 function MediaLinks({
   clickElement = <Button variant="circle" sx={{ color: "dark.main" }} />,
 }) {
-  const links = useContext(MediaLinksContext);
-  const iconLinks = iconMap(links, clickElement);
+  const { mediaLinks = [] } = useContext(SectionDataContext);
+  const iconLinks = iconMap(mediaLinks, clickElement);
   const iconLinkBtns = iconLinks.map((link) => {
     return link.icon;
   });
-  
 
   return (
     <Stack

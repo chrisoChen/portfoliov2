@@ -15,7 +15,6 @@ function ScrollProvider(props) {
 
   return (
     <ScrollContext.Provider value={scrollValue}>
-      {children}
       {sectionComponents}
     </ScrollContext.Provider>
   );

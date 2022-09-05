@@ -1,13 +1,12 @@
 import { Button } from "@mui/material";
-import { Link } from "@mui/material";
 import EmailIcon from "@mui/icons-material/Email";
-import { MediaLinksContext } from "../context/MediaLinksContext";
+import { SectionDataContext } from "../context/SectionDataContext";
 import { useContext } from "react";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
 function BtnContact(props) {
   const { children } = props;
-  const mediaLinks = useContext(MediaLinksContext);
+  const { mediaLinks = [] } = useContext(SectionDataContext);
   const emailLink = mediaLinks.find(
     (element) => element.name.toLowerCase() === "email"
   );

@@ -1,22 +1,16 @@
-import Navbar from "../components/Navbar";
 import { ScrollProvider } from "../context/ScrollContext";
-import { MediaLinksProvider } from "../context/MediaLinksContext";
-import { ExperienceProvider } from "../context/ExperienceContext";
+import { SectionDataProvider } from "../context/SectionDataContext";
 import fsPromises from "fs/promises";
 import path from "path";
 import endpoints from "../util/endpoints";
 
 function Main(props) {
-  const { sections = [], mediaLinks = [], experience = [] } = props;
-
+  const { sections = [] } = props;
   return (
     <>
-      <ExperienceProvider experience={experience}>
-        <MediaLinksProvider mediaLinks={mediaLinks}>
-          <ScrollProvider sections={sections}>
-          </ScrollProvider>
-        </MediaLinksProvider>
-      </ExperienceProvider>
+      <SectionDataProvider data={props}>
+        <ScrollProvider sections={sections}></ScrollProvider>
+      </SectionDataProvider>
     </>
   );
 }

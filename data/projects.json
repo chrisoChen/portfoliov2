@@ -1,0 +1,20 @@
+{
+  "projects": [
+    {
+      "name": "Virtulib",
+      "repoUrl": "https://github.com/chris-personal-projects/virtulib-project",
+      "tools": [
+        "C#",
+        "WPF",
+        "Material Design",
+        "Font Awesome",
+        "JSON",
+        "Open Library API",
+        "Python",
+        "Git"
+      ],
+      "imageUrl": "../public/proj-imgs/virtulib-sample.jpg",
+      "description": ""
+    }
+  ]
+}
