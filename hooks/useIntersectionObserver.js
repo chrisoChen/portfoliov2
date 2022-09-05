@@ -2,15 +2,14 @@ import { useState, useEffect } from "react";
 
 // Obtained from Ryan Finni's guide to lazy load React components:
 // Source: https://letsbuildui.dev/articles/how-to-lazy-load-react-components
-const useIntersectionObserver = (
-  reference,
-  options = {threshold: 0.35 }
-) => {
+const useIntersectionObserver = (reference, options = { threshold: 0.1 }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const handleIntersect = (entries, observer) => {
       if (entries[0].isIntersecting) {
+        console.log("am visible");
+        console.log(entries[0]);
         setIsVisible(true);
         observer.unobserve(entries[0].target);
         observer.disconnect();

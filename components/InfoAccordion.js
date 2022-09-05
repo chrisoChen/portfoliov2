@@ -34,7 +34,7 @@ function InfoAccordion(props) {
         <Typography variant="h4">{companyName}</Typography>
       </AccordionSummary>
       <AccordionDetails>
-        <Typography variant="h3" mt={1}>
+        <Typography variant="h3" my={2.5}>
           {positionName}
         </Typography>
         <Stack direction="row" spacing={2} alignItems="center">
@@ -55,7 +55,7 @@ function InfoAccordion(props) {
             </Link>
           </Typography>
         </Stack>
-        <Typography variant="h5">
+        <Typography variant="h4">
           {startDate} - {endDate}
         </Typography>
 

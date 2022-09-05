@@ -9,35 +9,35 @@ const componentTheme = {
     MuiButton: {
       styleOverrides: {
         root: {
-          fontSize: "1rem",
           borderColor: "secondary",
           border: `2px solid ${colorTheme.palette.secondary.main}`,
           color: colorTheme.palette.secondary.main,
           backgroundColor: colorTheme.palette.dark.main,
           borderRadius: "5px",
           textTransform: "capitalize",
+          fontSize: "1rem",
+          [tempTheme.breakpoints.up("sm")]: {
+            fontSize: "1.2rem",
+          },
         },
       },
       variants: [
         {
           props: { variant: "circle" },
           style: {
-            [tempTheme.breakpoints.up("md")]: {
-              width: "75px",
-              height: "75px",
+            [tempTheme.breakpoints.up("sm")]: {
+              fontSize: "3rem",
             },
-            width: "60px",
-            height: "60px",
-            padding: 0,
-            margin: 0,
-            fontSize: "3rem",
+            width: "1.5em",
+            minWidth: "1.5em",
+            height: "1.5em",
+            padding: "auto",
+            margin: "auto",
+            fontSize: "2rem",
             borderRadius: "50%",
             borderColor: colorTheme.palette.neutral.main,
             backgroundColor: colorTheme.palette.neutral.main,
             boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25);",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
           },
         },
       ],
@@ -128,7 +128,7 @@ const componentTheme = {
             },
             width: "95%",
             // padding: "3rem 0",
-            padding: `${tempTheme.spacing(6)} 0`,
+            padding: `${tempTheme.spacing(2)} 0`,
           },
         },
       ],

@@ -10,7 +10,7 @@ import Slide from "@mui/material/Slide";
 
 function Experience({ sectionRef }) {
   const experience = useContext(ExperienceContext);
-  const [expanded, setExpanded] = useState(0);
+  const [expanded, setExpanded] = useState(null);
 
   const isSectionVisible = useIntersectionObserver(sectionRef);
 

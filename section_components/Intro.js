@@ -22,7 +22,7 @@ function Intro({ sectionRef }) {
         <Grid item my="auto">
           <Container sx={{ textAlign: "center" }} variant="section">
             <Box>
-              <Box my={5}>
+              <Box my={{ xs: 2, md: 5 }}>
                 <Typography variant="h1">Chris Chen</Typography>
                 <Typography variant="h2">Software Developer</Typography>
               </Box>

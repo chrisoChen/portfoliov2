@@ -1,60 +1,73 @@
 import colorTheme from "./colorTheme";
+import { createTheme } from "@mui/material";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
-
 import "@fontsource/roboto/700.css";
+
+const defaultTheme = createTheme();
 
 const fontTheme = {
   typography: {
     fontFamily: "Roboto",
     h1: {
       color: colorTheme.palette.secondaryAlt.main,
-      fontSize: "3.5rem",
-      lineHeight: "75px",
+      fontSize: "3rem",
+      lineHeight: "3.5rem",
       fontWeight: "200",
       fontStyle: "normal",
+      [defaultTheme.breakpoints.up("sm")]: {
+        fontSize: "3.5rem",
+      },
     },
     h2: {
       color: colorTheme.palette.secondary.main,
-      fontSize: "2.5rem",
-      lineHeight: "56.25px",
+      fontSize: "1.75rem",
+      lineHeight: "2.375rem",
       fontWeight: "500",
       fontStyle: "normal",
+      [defaultTheme.breakpoints.up("sm")]: {
+        fontSize: "2.5rem",
+      },
     },
     h3: {
       color: colorTheme.palette.secondary.main,
-      fontSize: "1.8rem",
-      lineHeight: "38px",
+      fontSize: "1.5rem",
+      lineHeight: "2rem",
       fontWeight: "700",
       fontStyle: "normal",
+      [defaultTheme.breakpoints.up("sm")]: {
+        fontSize: "2rem",
+      },
     },
     h4: {
       color: colorTheme.palette.secondary.main,
-      fontSize: "1.5rem",
-      lineHeight: "28px",
+      fontSize: "1.2rem",
+      lineHeight: "1.5rem",
       fontWeight: "700",
       fontStyle: "normal",
-    },
-    h5: {
-      color: colorTheme.palette.secondary.main,
-      fontSize: "1.375rem",
-      lineHeight: "26px",
-      fontWeight: "500",
-      fontStyle: "normal",
+      [defaultTheme.breakpoints.up("sm")]: {
+        fontSize: "1.5rem",
+      },
     },
     body1: {
       color: colorTheme.palette.secondaryAlt.main,
-      fontSize: "1.5rem",
-      lineHeight: "28.13px",
+      fontSize: "1.25rem",
+      lineHeight: "1.25em",
       fontWeight: "500",
       fontStyle: "normal",
+      [defaultTheme.breakpoints.up("sm")]: {
+        fontSize: "1.5rem",
+      },
     },
     body2: {
       color: colorTheme.palette.secondaryAlt.main,
-      fontSize: "1rem",
+      fontSize: "0.75rem",
       lineHeight: "28.13px",
       fontWeight: "500",
       fontStyle: "normal",
+      [defaultTheme.breakpoints.up("sm")]: {
+        fontSize: "1rem",
+      },
     },
   },
 };
