@@ -3,6 +3,9 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
 import RateReviewIcon from "@mui/icons-material/RateReview";
 import LinkIcon from "@mui/icons-material/Link";
+import DesignServicesIcon from "@mui/icons-material/DesignServices";
+import YouTubeIcon from "@mui/icons-material/YouTube";
+import SportsScoreIcon from "@mui/icons-material/SportsScore";
 import Link from "@mui/material/Link";
 import { cloneElement } from "react";
 import { v4 as uuidv4 } from "uuid";
@@ -17,6 +20,12 @@ function iconReducer(link) {
       return <EmailIcon />;
     case "medium blog":
       return <RateReviewIcon />;
+    case "figma":
+      return <DesignServicesIcon />;
+    case "youtube":
+      return <YouTubeIcon />;
+    case "hackathon":
+      return <SportsScoreIcon />;
     default:
       return <LinkIcon />;
   }

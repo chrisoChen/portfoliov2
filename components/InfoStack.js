@@ -41,7 +41,7 @@ function InfoStack(props) {
         direction={reverse ? "row-reverse" : "row"}
         gap={5}
       >
-        <Box sx={{ width: { xs: "100%", md: "50%" } }}>
+        <Box sx={{ width: { xs: "100%", md: "45%" } }}>
           <Typography variant="h3">{projectName}</Typography>
           <Box mt={1}>
             <InfoChips infoList={projectTools} />
@@ -62,11 +62,19 @@ function InfoStack(props) {
         <Box
           sx={{
             width: { xs: "100%", md: "40%" },
-            marginLeft: "auto",
+            margin: "0 auto",
             display: { xs: "none", md: "block" },
           }}
         >
-          <Image src={projectImageUrl} width="350" height="250" />
+          <Box>
+            <Image
+              style={{ borderRadius: "10px" }}
+              src={projectImageUrl}
+              width="500"
+              height="350"
+              priority
+            />
+          </Box>
         </Box>
       </Stack>
       <Divider

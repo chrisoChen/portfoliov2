@@ -1,6 +1,36 @@
 {
   "projects": [
     {
+      "projectName": "Portfolio (NextJS)",
+      "projectTools": [
+        "NextJS",
+        "React",
+        "JavaScript",
+        "MUI (Material UI)",
+        "Figma",
+        "Jest",
+        "RTL (React Testing Library)",
+        "JSON",
+        "Git"
+      ],
+      "projectImageUrl": "/proj-imgs/portfoliov2-sample.jpg",
+      "projectDescription": "The second iteration and rework of my portfolio used to present my old gigs and projects. Inspired by Brittany Chiang's portfolio.",
+      "projectLinks": [
+        {
+          "name": "Github",
+          "url": "https://github.com/chrisoChen/portfoliov2"
+        },
+        {
+          "name": "Figma",
+          "url": "https://www.figma.com/file/JmIhR0PsfKHova5IpKWGfw/Portfolio?node-id=0%3A1"
+        },
+        {
+          "name": "Inspiration",
+          "url": "https://brittanychiang.com/"
+        }
+      ]
+    },
+    {
       "projectName": "Virtulib",
       "projectTools": [
         "C#",
@@ -13,11 +43,45 @@
         "Git"
       ],
       "projectImageUrl": "/proj-imgs/virtulib-sample.jpg",
-      "projectDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur voluptatum vero fugiat illo, distinctio quis libero beatae ducimus iure rem!",
+      "projectDescription": "A online library interface catered to bringing the browsing experience of in-person libraries to the comfort of your own home. This project has a focus on implementing UI and UX elements instead of functionality.",
       "projectLinks": [
         {
           "name": "Github",
           "url": "https://github.com/chris-personal-projects/virtulib-project"
+        }
+      ]
+    },
+    {
+      "projectName": "Journable",
+      "projectTools": [
+        "Rest API",
+        "Flask",
+        "Python",
+        "MongoDB",
+        "Google OAuth 2.0",
+        "Google Natural Language API",
+        "Heroku",
+        "Github Actions",
+        "React",
+        "JavaScript",
+        "Bootstrap",
+        "Github Pages",
+        "Git"
+      ],
+      "projectImageUrl": "/proj-imgs/journable-sample.jpg",
+      "projectDescription": "A modern journaling application powered by AI and machine learning to make writing journals more accessible for everyone. Winner of the best use of machine learning bounty category for the CalgaryHacks 2022 hackathon challenge.",
+      "projectLinks": [
+        {
+          "name": "Github",
+          "url": "https://github.com/liconway/calgaryhacks2022"
+        },
+        {
+          "name": "Hackathon",
+          "url": "https://devpost.com/software/journable"
+        },
+        {
+          "name": "Youtube",
+          "url": "https://www.youtube.com/watch?v=hql12h99wJo"
         }
       ]
     }
