@@ -7,7 +7,7 @@ function InfoChips(props) {
     infoList = [],
     mt = 2,
     size = "small",
-    sx = { fontSize: { xs: "0.5rem", md: "0.9rem" } },
+    sx = { fontSize: "0.9rem" },
   } = props;
 
   const techTools = infoList.map((infoItem) => {
