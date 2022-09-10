@@ -1,0 +1,10 @@
+{
+  "about": {
+    "intro": "I'm a full stack software developer and a student at heart: whether it be a book, an interesting article, or a difficult problem, I like to get lost in the things I do.",
+    "introSecondary": "I had the pleasures of working for a startup and a medium sized corporation to support their early stages of structuring and their web product for their clients.",
+    "currentTools": {
+      "description": "I am currently interested in or working with the following tools:",
+      "toolList": ["JavaScript", "React", "Python", "C#", "Web API"]
+    }
+  }
+}

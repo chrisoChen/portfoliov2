@@ -12,7 +12,9 @@ function ClosingMessage({ sectionRef }) {
   return (
     <Fade in={isSectionVisible}>
       <Container variant="section" maxWidth="md" sx={{ textAlign: "center" }}>
-        <Typography variant="h2">Next Steps</Typography>
+        <Typography variant="h2" my={2}>
+          Next Steps
+        </Typography>
         <Typography variant="body1" mt={1} mb={3}>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus
           officiis officia earum neque quaerat ab, eveniet minus ex. Quia, sit.

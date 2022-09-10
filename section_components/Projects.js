@@ -29,7 +29,7 @@ function Projects({ sectionRef }, props) {
   return (
     <Slide in={isSectionVisible} direction="right">
       <Container variant="section">
-        <Typography variant="h2" sx={{ textAlign: "center" }}>
+        <Typography my={4} variant="h2" sx={{ textAlign: "center" }}>
           Projects
         </Typography>
         {projectsStack}

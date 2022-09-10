@@ -10,7 +10,7 @@ function Archive({ sectionRef }) {
   return (
     <Slide in={isSectionVisible} direction="right">
       <Container variant="section">
-        <Typography variant="h2" sx={{ textAlign: "center" }}>
+        <Typography mt={6} variant="h2" sx={{ textAlign: "center"}}>
           Archive Projects
         </Typography>
         <InfoGrid />

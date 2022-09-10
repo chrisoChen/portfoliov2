@@ -46,7 +46,12 @@ function Experience({ sectionRef }) {
   return (
     <Slide in={isSectionVisible} direction="right">
       <Container variant="section">
-        <Typography variant="h2" gutterBottom sx={{ textAlign: "center" }}>
+        <Typography
+          my={4}
+          variant="h2"
+          gutterBottom
+          sx={{ textAlign: "center" }}
+        >
           Experience
         </Typography>
         <Card sx={backgroundStyle}>{experienceAccordions}</Card>

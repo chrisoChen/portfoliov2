@@ -1,15 +1,15 @@
 {
   "projects": [
     {
-      "projectName": "Portfolio (NextJS)",
+      "projectName": "PortfolioV2",
       "projectTools": [
         "NextJS",
         "React",
         "JavaScript",
-        "MUI (Material UI)",
+        "MUI",
         "Figma",
         "Jest",
-        "RTL (React Testing Library)",
+        "RTL",
         "JSON",
         "Git"
       ],

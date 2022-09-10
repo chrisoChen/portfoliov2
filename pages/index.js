@@ -6,6 +6,7 @@ import endpoints from "../util/endpoints";
 
 function Main(props) {
   const { sections = [] } = props;
+
   return (
     <>
       <SectionDataProvider data={props}>
