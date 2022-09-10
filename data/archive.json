@@ -1,0 +1,5 @@
+{
+  "archive": {
+    "denyList": ["portfoliov2 ", "virtulib-project", "calgaryhacks2022"]
+  }
+}

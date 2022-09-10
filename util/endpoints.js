@@ -4,6 +4,7 @@ const endpoints = {
   media: "data/mediaLinks.json",
   experience: "data/experience.json",
   projects: "data/projects.json",
+  archive: "data/archive.json",
 };
 
 export default endpoints;
