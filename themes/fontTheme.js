@@ -61,12 +61,12 @@ const fontTheme = {
     },
     body2: {
       color: colorTheme.palette.secondaryAlt.main,
-      fontSize: "0.75rem",
-      lineHeight: "28.13px",
+      fontSize: "1.15rem",
+      lineHeight: "1.25em",
       fontWeight: "500",
       fontStyle: "normal",
       [defaultTheme.breakpoints.up("sm")]: {
-        fontSize: "1rem",
+        fontSize: "1.3rem",
       },
     },
   },

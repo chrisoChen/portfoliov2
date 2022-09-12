@@ -1,11 +1,10 @@
-import { Card, CardContent } from "@mui/material";
+import { Card, CardContent, CardHeader } from "@mui/material";
 import { Typography } from "@mui/material";
 import { Grid } from "@mui/material";
-import { Stack } from "@mui/material";
 import InfoChips from "./InfoChips";
-import Link from "@mui/material/Link";
-import GitHubIcon from "@mui/icons-material/GitHub";
 import iconMap from "../util/iconMap";
+import { Box } from "@mui/material";
+import { textTransform } from "@mui/system";
 
 function InfoGridItem(props) {
   const {
@@ -16,26 +15,39 @@ function InfoGridItem(props) {
   } = props;
 
   const sourceLinks = projectLinks
-    ? iconMap(projectLinks).map((link) => {
+    ? iconMap(projectLinks, <Box />, projectName).map((link) => {
         return link.icon;
       })
     : null;
 
   return (
-    <Grid item xs={11} md={3.6} mt={1}>
+    <Grid item xs={11} md={3.75} mt={{ xs: 1, md: 2 }}>
       <Card
         sx={{
-          minHeight: { xs: "18rem", md: "22rem" },
+          minHeight: { xs: "5em", md: "10em" },
           backgroundColor: "dark.main",
         }}
       >
-        <CardContent>
-          <Typography variant="h3">{projectName}</Typography>
-          <InfoChips infoList={projectTools} />
-          <Typography variant="body1" my={1}>
-            {projectSummary}
-          </Typography>
-          {sourceLinks}
+        <CardHeader
+          title={projectName}
+          titleTypographyProps={{
+            variant: "h4",
+            sx: { textTransform: "capitalize" },
+          }}
+          subheader={<InfoChips infoList={projectTools} />}
+          sx={{ overflowX: "auto", mt: 1 }}
+        ></CardHeader>
+        <CardContent
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            flexGrow: "1",
+            justifyContent: "space-between",
+            minHeight: "inherit",
+          }}
+        >
+          <Typography variant="body2">{projectSummary}</Typography>
+          <Box mt={2}>{sourceLinks}</Box>
         </CardContent>
       </Card>
     </Grid>

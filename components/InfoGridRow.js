@@ -3,8 +3,37 @@ import { Box } from "@mui/material";
 import { Grid } from "@mui/material";
 import { Container } from "@mui/system";
 import InfoGridItem from "./InfoGridItem";
+import { v4 as uuidv4 } from "uuid";
 
 function InfoGridRow(props) {
+  const { projectList = [] } = props;
+  const myRepo = process.env.NEXT_PUBLIC_GITHUB_USERNAME.toLowerCase();
+
+  const gridItems = projectList.map((project) => {
+    const githubOwner = project.owner.login.toLowerCase();
+
+    return (
+      <InfoGridItem
+        key={uuidv4()}
+        projectName={project.name}
+        projectTools={
+          githubOwner === myRepo ? project.topics : [project.language]
+        }
+        projectSummary={
+          githubOwner === myRepo
+            ? project.description
+            : `The repo for my project or the project that I worked on, ${project.name}.`
+        }
+        projectLinks={[
+          {
+            name: "Github",
+            url: project.html_url,
+          },
+        ]}
+      />
+    );
+  });
+
   return (
     <>
       <Paper
@@ -30,47 +59,9 @@ function InfoGridRow(props) {
         flexWrap="wrap"
         justifyContent="space-around"
         alignItems="flex-start"
-        rowGap={4}
+        rowGap={2}
       >
-        <InfoGridItem
-          projectName="Project Name Heading"
-          projectTools={["React", "Selenium"]}
-          projectSummary="Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Consequuntur voluptatum vero fugiat illo, distinctio quis libero
-          beatae ducimus iure rem!"
-          projectLinks={[
-            {
-              name: "Github",
-              url: "https://getpocket.com/explore/item/why-birds-survived-and-dinosaurs-went-extinct-after-an-asteroid-hit-earth?utm_source=pocket-newtab",
-            },
-          ]}
-        />
-        <InfoGridItem
-          projectName="Project Name Heading"
-          projectTools={["React", "Selenium"]}
-          projectSummary="Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Consequuntur voluptatum vero fugiat illo, distinctio quis libero
-          beatae ducimus iure rem!"
-          projectLinks={[
-            {
-              name: "Github",
-              url: "https://getpocket.com/explore/item/why-birds-survived-and-dinosaurs-went-extinct-after-an-asteroid-hit-earth?utm_source=pocket-newtab",
-            },
-          ]}
-        />
-        <InfoGridItem
-          projectName="Project Name Heading"
-          projectTools={["React", "Selenium"]}
-          projectSummary="Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Consequuntur voluptatum vero fugiat illo, distinctio quis libero
-          beatae ducimus iure rem!"
-          projectLinks={[
-            {
-              name: "Github",
-              url: "https://getpocket.com/explore/item/why-birds-survived-and-dinosaurs-went-extinct-after-an-asteroid-hit-earth?utm_source=pocket-newtab",
-            },
-          ]}
-        />
+        {gridItems}
       </Grid>
     </>
   );

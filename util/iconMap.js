@@ -7,6 +7,7 @@ import DesignServicesIcon from "@mui/icons-material/DesignServices";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import SportsScoreIcon from "@mui/icons-material/SportsScore";
 import Link from "@mui/material/Link";
+import { Box } from "@mui/material";
 import { cloneElement } from "react";
 import { v4 as uuidv4 } from "uuid";
 
@@ -31,7 +32,7 @@ function iconReducer(link) {
   }
 }
 
-function iconMap(links, clickElement = null, owner = "") {
+function iconMap(links, clickElement = <Box />, owner = "") {
   const linkStyle = {
     display: "flex",
     alignItems: "center",

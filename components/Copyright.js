@@ -9,7 +9,12 @@ function Copyright() {
           fontSize="small"
           sx={{ color: "secondaryAlt.main" }}
         ></CopyrightIcon>
-        <Typography variant="body2">All rights reserved</Typography>
+        <Typography
+          variant="body2"
+          sx={{ display: { xs: "none", md: "initial" } }}
+        >
+          All rights reserved
+        </Typography>
       </Stack>
     </Container>
   );

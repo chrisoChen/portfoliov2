@@ -9,7 +9,7 @@ import { SectionDataContext } from "../context/SectionDataContext";
 function Archive({ sectionRef }) {
   const isSectionVisible = useIntersectionObserver(sectionRef);
   const { archive } = useContext(SectionDataContext);
-  
+
   return (
     <Slide in={isSectionVisible} direction="right">
       <Container variant="section">
@@ -17,9 +17,9 @@ function Archive({ sectionRef }) {
           Archive Projects
         </Typography>
         <InfoGrid
-          projectData={archive}
+          projectList={archive.projectList}
           displayCap={6}
-          banList={SectionDataContext.banList}
+          banList={archive.banList}
         />
       </Container>
     </Slide>

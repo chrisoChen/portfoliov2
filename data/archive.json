@@ -1,5 +1,6 @@
 {
   "archive": {
-    "banList": ["portfoliov2 ", "virtulib-project", "calgaryhacks2022"]
+    "banList": ["portfoliov2 ", "virtulib-project", "calgaryhacks2022"],
+    "projectList": []
   }
 }
