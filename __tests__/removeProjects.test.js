@@ -3,6 +3,7 @@ import {
   getSectionData,
   convertProps,
 } from "../util/getData.js";
+import { filterProjects } from "../util/getData.js";
 import endpoints from "../util/endpoints";
 
 let archiveData, sectionData, propData;
@@ -12,10 +13,15 @@ beforeAll(async () => {
   propData = convertProps(sectionData, archiveData);
 });
 
-describe("project data retrieved from my Github Url", () => {
-  test("can be cleaned from my banList", () => {
-    // console.log(archiveData);
-    // console.log(sectionData);
-    console.log(propData);
+describe("Project data from my Github", () => {
+  test("doesn't include my first banList item", () => {
+    const { banList = [], projectList = [] } = propData.archive;
+    const filteredProjects = filterProjects(projectList, banList);
+
+    const results = filteredProjects.find(
+      (element) => element.name === banList[0]
+    );
+
+    expect(results).toBeUndefined();
   });
 });

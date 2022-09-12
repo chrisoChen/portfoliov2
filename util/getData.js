@@ -14,9 +14,17 @@ function getSectionData(endpoints) {
 
 async function getArchiveData(projectsEndpoint) {
   try {
-    const archive_response = await fetch(projectsEndpoint);
-    const invalid_response = !archive_response.ok;
+    const headers = new Headers();
+    headers.append(
+      "Authorization",
+      `Bearer ${process.env.GITHUB_REPO_AUTH_TOKEN}`
+    );
 
+    const archive_response = await fetch(projectsEndpoint, {
+      headers: headers,
+    });
+
+    const invalid_response = !archive_response.ok;
     if (invalid_response) {
       return [];
     }
@@ -27,7 +35,7 @@ async function getArchiveData(projectsEndpoint) {
   }
 }
 
-function convertProps(sectionData, archiveData) {
+function convertProps(sectionData, projectData) {
   const propData = sectionData.reduce((prev, curr) => {
     return {
       ...prev,
@@ -35,8 +43,17 @@ function convertProps(sectionData, archiveData) {
     };
   }, {});
 
-  propData["archive"].archiveProjects = archiveData;
+  propData["archive"].projectList = projectData;
   return propData;
 }
 
-export { getSectionData, getArchiveData, convertProps };
+function filterProjects(projects, banList) {
+  const filtered_projects = projects.filter((project) => {
+    const nonBanItem = !banList.includes(project.name);
+    return nonBanItem;
+  });
+
+  return filtered_projects;
+}
+
+export { getSectionData, getArchiveData, convertProps, filterProjects };
