@@ -66,7 +66,7 @@ const fontTheme = {
       fontWeight: "500",
       fontStyle: "normal",
       [defaultTheme.breakpoints.up("sm")]: {
-        fontSize: "1.3rem",
+        fontSize: "1.35rem",
       },
     },
   },

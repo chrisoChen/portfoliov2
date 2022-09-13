@@ -8,6 +8,8 @@ import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import Link from "@mui/material/Link";
 
 import InfoChips from "./InfoChips";
+import { List, ListItem } from "@mui/material";
+import { v4 as uuidv4 } from "uuid";
 
 function InfoAccordion(props) {
   const {
@@ -16,13 +18,22 @@ function InfoAccordion(props) {
     positionName = "",
     companyLink = "",
     jobTools = [],
-    jobDetails = "",
+    jobDetails = [],
     startDate = "",
     endDate = "",
     expanded,
     handleChange = () => null,
-    idKey,
   } = props;
+
+  const jobDetailsList = jobDetails.map((jobDetail) => {
+    return (
+      <ListItem key={uuidv4()}>
+        <Typography variant="body2" sx={{ display: "list-item" }}>
+          {jobDetail}
+        </Typography>
+      </ListItem>
+    );
+  });
 
   return (
     <Accordion expanded={expanded === index} onChange={handleChange(index)}>
@@ -61,9 +72,11 @@ function InfoAccordion(props) {
 
         <InfoChips infoList={jobTools} />
 
-        <Typography variant="body1" mt={2}>
-          {jobDetails}
-        </Typography>
+        <List
+          sx={{ listStylePosition: "inside", listStyleType: "square", py: 4 }}
+        >
+          {jobDetailsList}
+        </List>
       </AccordionDetails>
     </Accordion>
   );

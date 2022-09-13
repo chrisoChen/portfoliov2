@@ -5,9 +5,12 @@ import BtnContact from "../components/BtnContact";
 import MediaLinks from "../components/MediaLinks";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
 import Fade from "@mui/material/Fade";
+import { useContext } from "react";
+import { SectionDataContext } from "../context/SectionDataContext";
 
 function ClosingMessage({ sectionRef }) {
   const isSectionVisible = useIntersectionObserver(sectionRef);
+  const { contact = {} } = useContext(SectionDataContext);
 
   return (
     <Fade in={isSectionVisible}>
@@ -15,9 +18,9 @@ function ClosingMessage({ sectionRef }) {
         <Typography variant="h2" my={2}>
           Next Steps
         </Typography>
+        <Typography variant="body1">{contact.contactMessage}</Typography>
         <Typography variant="body1" mt={1} mb={3}>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus
-          officiis officia earum neque quaerat ab, eveniet minus ex. Quia, sit.
+          {contact.subContactMessage}
         </Typography>
         <BtnContact>Say Hello</BtnContact>
         <Box sx={{ my: 4 }}>
