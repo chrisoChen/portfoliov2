@@ -23,9 +23,9 @@
         "Git"
       ],
       "jobDetails": [
-        "Created and maintained Python scripts that supported Irdeto's scalable, cloud-based automated crawling technology, which combatted illegal video on demand content streams and live events.",
-        "Maintained Irdeto's internal Python script tracking app that managed the profile scripts used to crawl for the online infringing content.",
-        "Added domain search and UI features to our profile tracking app to make it easier for our developers and analyst to work with and update our Python profile scripts.",
+        "Created and maintained Python profile scripts that supported Irdeto's scalable, cloud-based automated crawling technology, which combatted illegal video on demand content streams and live events.",
+        "Maintained Irdeto's internal profile script tracking app that managed the profile scripts used to crawl for the online infringing content.",
+        "Added domain search and UI features to our profile tracking app to make it easier for our developers and analyst to work with and update our profile scripts.",
         "Contributed to a team built Google Chrome extension that automated manual form entry and reduced the strain for analysts to send DMCA take down notices.",
         "Hosted the discovery team's retrospective meetings to analyze methods to improve overall productivity for each of our sprint cycles."
       ]
