@@ -24,8 +24,8 @@
       ],
       "jobDetails": [
         "Created and maintained Python scripts that supported Irdeto's scalable, cloud-based automated crawling technology, which combatted illegal video on demand content streams and live events.",
-        "Maintained Irdeto's internal app that managed the profile scripts used to crawl for the online infringing content.",
-        "Added new features to our internal app, such as search by domain and UI front end additions. This made it easier for our developers and analysts to search and view specific profiles responsible for tracking infringing content.",
+        "Maintained Irdeto's internal Python script tracking app that managed the profile scripts used to crawl for the online infringing content.",
+        "Added domain search and UI features to our profile tracking app to make it easier for our developers and analyst to work with and update our Python profile scripts.",
         "Contributed to a team built Google Chrome extension that automated manual form entry and reduced the strain for analysts to send DMCA take down notices.",
         "Hosted the discovery team's retrospective meetings to analyze methods to improve overall productivity for each of our sprint cycles."
       ]
@@ -46,8 +46,8 @@
         "Affinity Photo"
       ],
       "jobDetails": [
-        "Converted our designer created advertising pages Figma to HTML, CSS, and JavaScript to influence potential customers to use our delivery services.",
-        "Executed manual web testing using multiple browsers, desktops, and smartphones to ensure web pages were responsive and compatible across different browsers and devices.",
+        "Converted our designer created advertising pages from Figma to HTML, CSS, and JavaScript to influence our potential customers and advertise our early-stage start-up.",
+        "Executed manual web testing using multiple browsers, desktops, and mobile devices to ensure web pages were cross platform compatible across different browsers and devices.",
         "Performed system testing on our web app to improve the functionality and usability of the app."
       ]
     }

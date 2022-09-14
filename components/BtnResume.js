@@ -14,7 +14,7 @@ function BtnResume(props) {
       href="/data/chris-chen-resume.pdf"
       target="_blank"
       rel="noopener noreferrer"
-      title="View My Resume"
+      title="View my resume"
     >
       {children}
     </Button>

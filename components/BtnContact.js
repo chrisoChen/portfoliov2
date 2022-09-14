@@ -19,7 +19,7 @@ function BtnContact(props) {
       rel="noopener noreferrer"
       href={emailLink.url}
       target="_blank"
-      title="Contact Me"
+      title="Send me an email"
     >
       {children}
     </Button>

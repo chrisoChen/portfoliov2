@@ -46,7 +46,7 @@ function iconMap(links, clickElement = <Box />, owner = "") {
     if (clickElement) {
       icon = cloneElement(
         clickElement,
-        { ...clickElement.props, title: `${owner} ${link.name} Link` },
+        { ...clickElement.props, title: `${owner} ${link.name} link` },
         icon
       );
     }
