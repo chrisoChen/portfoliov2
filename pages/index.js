@@ -22,7 +22,7 @@ export default Main;
 
 export async function getStaticProps() {
   const sectionData = await getSectionData(endpoints);
-  const archiveData = await getArchiveData(process.env.GITHUB_REPO_API);
+  const archiveData = await getArchiveData(process.env.REPO_API);
   const sectionProps = convertProps(sectionData, archiveData);
   return {
     props: sectionProps,

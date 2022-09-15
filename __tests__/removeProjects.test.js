@@ -9,7 +9,7 @@ import endpoints from "../util/endpoints";
 let archiveData, sectionData, propData;
 beforeAll(async () => {
   sectionData = await getSectionData(endpoints);
-  archiveData = await getArchiveData(process.env.GITHUB_REPO_API);
+  archiveData = await getArchiveData(process.env.REPO_API);
   propData = convertProps(sectionData, archiveData);
 });
 

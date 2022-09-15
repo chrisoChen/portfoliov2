@@ -17,7 +17,7 @@ async function getArchiveData(projectsEndpoint) {
     const headers = new Headers();
     headers.append(
       "Authorization",
-      `Bearer ${process.env.GITHUB_REPO_AUTH_TOKEN}`
+      `Bearer ${process.env.REPO_AUTH_TOKEN}`
     );
 
     const archive_response = await fetch(projectsEndpoint, {
