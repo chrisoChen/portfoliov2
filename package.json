@@ -7,7 +7,7 @@
     "test": "jest --watch",
     "init": "jest --init",
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "next build",
     "start": "next start"
   },
   "keywords": [],
