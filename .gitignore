@@ -38,5 +38,6 @@ packages/react-devtools-shell/dist
 packages/react-devtools-timeline/dist
 
 .next
+/out/
 .env.local
 .env.test
