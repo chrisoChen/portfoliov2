@@ -25,14 +25,12 @@ function InfoGrid(props) {
 
   // Splice the remaining projects that weren't divsible by the row cap
   if (rowRemainder > 0)
-    spliceProjects(archiveProjects, displayCap % ROW_CAP, archiveRows);
+    spliceProjects(archiveProjects, rowRemainder, archiveRows);
 
   return (
     // Relative position of Box for sticky tab headers
     <Box sx={{ position: "relative" }}>
-      <Container disableGutters>
-        {archiveRows}
-      </Container>
+      <Container disableGutters>{archiveRows}</Container>
     </Box>
   );
 }

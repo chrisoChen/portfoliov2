@@ -7,10 +7,12 @@ import { v4 as uuidv4 } from "uuid";
 
 function InfoGridRow(props) {
   const { projectList = [] } = props;
-  const myRepo = process.env.NEXT_PUBLIC_GITHUB_USERNAME.toLowerCase();
+  let myRepo = process.env.NEXT_PUBLIC_GITHUB_USERNAME;
+  if (myRepo) myRepo = myRepo.toLowerCase();
 
   const gridItems = projectList.map((project) => {
-    const githubOwner = project.owner.login.toLowerCase();
+    let githubOwner = project.owner.login.toLowerCase();
+    if (githubOwner) githubOwner = githubOwner.toLowerCase();
 
     return (
       <InfoGridItem
@@ -55,11 +57,11 @@ function InfoGridRow(props) {
       ></Paper>
       <Grid
         container
-        my={4}
+        my={{ xs: 1, md: 4 }}
         flexWrap="wrap"
         justifyContent="space-around"
         alignItems="flex-start"
-        rowGap={2}
+        rowGap={{ xs: 1, md: 4 }}
       >
         {gridItems}
       </Grid>

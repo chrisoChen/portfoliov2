@@ -14,7 +14,7 @@
         "Git"
       ],
       "projectImageUrl": "/proj-imgs/portfoliov2-sample.jpg",
-      "projectDescription": "The second iteration and rework of my portfolio used to present my old gigs and projects. Inspired by Brittany Chiang's portfolio.",
+      "projectDescription": "A rework of my web portfolio used to present my old gigs and projects. Inspired by Brittany Chiang's portfolio.",
       "projectLinks": [
         {
           "name": "Github",
@@ -43,7 +43,7 @@
         "Git"
       ],
       "projectImageUrl": "/proj-imgs/virtulib-sample.jpg",
-      "projectDescription": "A online library interface catered to bringing the browsing experience of in-person libraries to the comfort of your own home. This project has a focus on implementing UI and UX elements instead of functionality.",
+      "projectDescription": "A online library interface that brings the browsing experience of in-person libraries to the comfort of your own home. This project has a focus on implementing UI and UX elements instead of actual functionality.",
       "projectLinks": [
         {
           "name": "Github",
@@ -69,7 +69,7 @@
         "Git"
       ],
       "projectImageUrl": "/proj-imgs/journable-sample.jpg",
-      "projectDescription": "A modern journaling application powered by AI and machine learning to make writing journals more accessible for everyone. Winner of the best use of machine learning bounty category for the CalgaryHacks 2022 hackathon challenge.",
+      "projectDescription": "A smart journaling app that uses AI and machine learning to make writing journals more accessible for everyone. Winner of the best use of machine learning for the CalgaryHacks 2022 hackathon challenge.",
       "projectLinks": [
         {
           "name": "Github",

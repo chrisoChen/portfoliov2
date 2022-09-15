@@ -15,7 +15,6 @@ import CloseIcon from "@mui/icons-material/Close";
 
 import NavItems from "./NavItems";
 import NavDrawer from "./NavDrawer";
-import BtnResume from "./BtnResume";
 
 function Navbar({ executeScroll, navbarOptions }) {
   const [drawerNavOpen, setDrawerNavOpen] = useState(false);

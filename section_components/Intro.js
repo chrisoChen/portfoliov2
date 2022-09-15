@@ -2,7 +2,6 @@ import { Typography } from "@mui/material";
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
-import BtnResume from "../components/BtnResume";
 import BtnContact from "../components/BtnContact";
 import MediaLinks from "../components/MediaLinks";
 import Navbar from "../components/Navbar";
@@ -32,7 +31,6 @@ function Intro({ sectionRef }) {
                 alignItems="center"
                 spacing={2}
               >
-                <BtnResume>Resume</BtnResume>
                 <BtnContact>Say Hello</BtnContact>
               </Stack>
               <Box my={4}>

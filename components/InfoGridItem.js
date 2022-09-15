@@ -21,7 +21,7 @@ function InfoGridItem(props) {
     : null;
 
   return (
-    <Grid item xs={11} md={3.75} mt={{ xs: 1, md: 2 }}>
+    <Grid item xs={11} md={3.75} my={{ xs: 1, md: 2 }}>
       <Card
         sx={{
           minHeight: { xs: "5em", md: "10em" },
