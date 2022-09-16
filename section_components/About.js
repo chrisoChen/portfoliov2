@@ -8,11 +8,12 @@ import Slide from "@mui/material/Slide";
 import { useContext } from "react";
 import { SectionDataContext } from "../context/SectionDataContext";
 import InfoChips from "../components/InfoChips";
+import { Box } from "@mui/material";
 
 function About({ sectionRef }) {
   const isSectionVisible = useIntersectionObserver(sectionRef);
   const { about } = useContext(SectionDataContext);
-
+  const profileImage = require.context("../imgs", true);
   return (
     <Slide direction="right" in={isSectionVisible}>
       <Container variant="section">
@@ -47,11 +48,17 @@ function About({ sectionRef }) {
               sx={{ width: { xs: "100%", md: "80%" }, maxWidth: "350px" }}
               maxWidth="300px"
             >
-              <Image
+              {/* <Image
                 src={profilePic}
                 priority
                 alt="A cartoon portrait of the software developer, Chris Chen. Chris poses directly at the camera and his glasses have been colored yellow and turquoise for a heightened cartoon look."
-              />
+              /> */}
+              <Box
+                component="img"
+                sx={{ height: "auto", width: "100%", maxWidth: 512 }}
+                alt="A cartoon portrait of the software developer, Chris Chen. Chris poses directly at the camera and his glasses have been colored yellow and turquoise for a heightened cartoon look."
+                src={profileImage("./cartoon-profile-chris.png").default.src}
+              ></Box>
             </Container>
           </Grid>
         </Grid>
