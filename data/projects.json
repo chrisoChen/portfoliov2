@@ -13,7 +13,7 @@
         "JSON",
         "Git"
       ],
-      "projectImageUrl": "/proj-imgs/portfoliov2-sample.jpg",
+      "projectImageUrl": "./portfoliov2-sample.jpg",
       "projectDescription": "A rework of my web portfolio used to present my old gigs and projects. Inspired by Brittany Chiang's portfolio.",
       "projectLinks": [
         {
@@ -42,7 +42,7 @@
         "Python",
         "Git"
       ],
-      "projectImageUrl": "/proj-imgs/virtulib-sample.jpg",
+      "projectImageUrl": "./virtulib-sample.jpg",
       "projectDescription": "A online library interface that brings the browsing experience of in-person libraries to the comfort of your own home. This project has a focus on implementing UI and UX elements instead of actual functionality.",
       "projectLinks": [
         {
@@ -68,7 +68,7 @@
         "Github Pages",
         "Git"
       ],
-      "projectImageUrl": "/proj-imgs/journable-sample.jpg",
+      "projectImageUrl": "./journable-sample.jpg",
       "projectDescription": "A smart journaling app that uses AI and machine learning to make writing journals more accessible for everyone. Winner of the best use of machine learning for the CalgaryHacks 2022 hackathon challenge.",
       "projectLinks": [
         {

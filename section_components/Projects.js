@@ -4,12 +4,13 @@ import InfoStack from "../components/InfoStack";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
 import Slide from "@mui/material/Slide";
 import { SectionDataContext } from "../context/SectionDataContext";
-import { useContext } from "react";
+import { useContext, useState, setProjImages } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 function Projects({ sectionRef }, props) {
   const isSectionVisible = useIntersectionObserver(sectionRef);
   const { projects = [] } = useContext(SectionDataContext);
+  const images = require.context("../imgs/proj-imgs", true);
   const reverseFactor = 2;
 
   const projectsStack = projects.map((project, index) => {
@@ -17,7 +18,7 @@ function Projects({ sectionRef }, props) {
       <InfoStack
         projectName={project.projectName}
         projectTools={project.projectTools}
-        projectImageUrl={project.projectImageUrl}
+        projectImageUrl={images(project.projectImageUrl)}
         projectDescription={project.projectDescription}
         projectLinks={project.projectLinks}
         reverse={index % reverseFactor ? true : false}

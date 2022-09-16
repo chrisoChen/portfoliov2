@@ -2,7 +2,7 @@ import { Container } from "@mui/material";
 import { Grid } from "@mui/material";
 import { Typography } from "@mui/material";
 import Image from "next/image";
-import profilePic from "../public/cartoon-profile-chris.png";
+import profilePic from "../imgs/cartoon-profile-chris.png";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
 import Slide from "@mui/material/Slide";
 import { useContext } from "react";
