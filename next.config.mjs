@@ -1,13 +1,9 @@
-/**
- * @type {import('next').NextConfig}
- */
+// next.config.js
+const isProd = process.env.NODE_ENV === 'production'
 
-// Config setup for Github pages
-const nextConfig = {
+module.exports = {
+  assetPrefix: isProd ? '/chrisochen/' : '',
   images: {
-    loader: "akamai",
-    path: "",
+    unoptimized: true,
   },
-  assetPrefix: "./",
-};
-export default nextConfig;
+}
