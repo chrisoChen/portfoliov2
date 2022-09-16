@@ -68,7 +68,7 @@ function InfoStack(props) {
               sx={{
                 height: "auto",
                 width: "100%",
-                maxWidth: 512,
+                maxWidth: 500,
                 borderRadius: "10px",
               }}
               alt={`My project, ${projectName}, is shown and displayed here with its appropriate links.`}
