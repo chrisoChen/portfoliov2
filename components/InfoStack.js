@@ -1,7 +1,6 @@
 import { Stack } from "@mui/material";
 import { Typography } from "@mui/material";
 import { Box } from "@mui/material";
-import Image from "next/image";
 import InfoChips from "./InfoChips";
 import { Divider } from "@mui/material";
 import HexagonIcon from "./HexagonIcon";
@@ -64,13 +63,17 @@ function InfoStack(props) {
           }}
         >
           <Box>
-            <Image
-              style={{ borderRadius: "10px" }}
+            <Box
+              component="img"
+              sx={{
+                height: "auto",
+                width: "100%",
+                maxWidth: 512,
+                borderRadius: "10px",
+              }}
+              alt={`My project, ${projectName}, is shown and displayed here with its appropriate links.`}
               src={projectImageUrl}
-              width="500"
-              height="350"
-              priority
-            />
+            ></Box>
           </Box>
         </Box>
       </Stack>

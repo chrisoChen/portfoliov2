@@ -18,7 +18,7 @@ function Projects({ sectionRef }, props) {
       <InfoStack
         projectName={project.projectName}
         projectTools={project.projectTools}
-        projectImageUrl={images(project.projectImageUrl)}
+        projectImageUrl={images(project.projectImageUrl).default.src}
         projectDescription={project.projectDescription}
         projectLinks={project.projectLinks}
         reverse={index % reverseFactor ? true : false}

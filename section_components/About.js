@@ -1,8 +1,6 @@
 import { Container } from "@mui/material";
 import { Grid } from "@mui/material";
 import { Typography } from "@mui/material";
-import Image from "next/image";
-import profilePic from "../imgs/cartoon-profile-chris.png";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
 import Slide from "@mui/material/Slide";
 import { useContext } from "react";
@@ -14,6 +12,7 @@ function About({ sectionRef }) {
   const isSectionVisible = useIntersectionObserver(sectionRef);
   const { about } = useContext(SectionDataContext);
   const profileImage = require.context("../imgs", true);
+
   return (
     <Slide direction="right" in={isSectionVisible}>
       <Container variant="section">
@@ -48,14 +47,14 @@ function About({ sectionRef }) {
               sx={{ width: { xs: "100%", md: "80%" }, maxWidth: "350px" }}
               maxWidth="300px"
             >
-              {/* <Image
-                src={profilePic}
-                priority
-                alt="A cartoon portrait of the software developer, Chris Chen. Chris poses directly at the camera and his glasses have been colored yellow and turquoise for a heightened cartoon look."
-              /> */}
               <Box
                 component="img"
-                sx={{ height: "auto", width: "100%", maxWidth: 512 }}
+                sx={{
+                  height: "auto",
+                  width: "100%",
+                  maxWidth: 512,
+                  borderRadius: "10px",
+                }}
                 alt="A cartoon portrait of the software developer, Chris Chen. Chris poses directly at the camera and his glasses have been colored yellow and turquoise for a heightened cartoon look."
                 src={profileImage("./cartoon-profile-chris.png").default.src}
               ></Box>
