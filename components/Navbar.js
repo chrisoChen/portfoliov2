@@ -11,7 +11,6 @@ import DescriptionIcon from "@mui/icons-material/Description";
 import MenuIcon from "@mui/icons-material/Menu";
 import Divider from "@mui/material/Divider";
 import List from "@mui/material/List";
-import CloseIcon from "@mui/icons-material/Close";
 
 import NavItems from "./NavItems";
 import NavDrawer from "./NavDrawer";
