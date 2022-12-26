@@ -1,10 +1,10 @@
 {
   "about": {
-    "intro": "I'm a full stack software developer and a student at heart: whether it be a book, an interesting article, or a difficult problem, I like to get lost in the things I do.",
-    "introSecondary": "I had the pleasures of working for a start-up and a medium-sized corporation to drive and support their business ventures.",
+    "intro": "I'm a full stack software developer and a student at heart: I like to get lost in the things I do!",
+    "introSecondary": "Previously, I have worked in logistics and piracy detection. I currently work in air emissions monitoring for Global Analyzer Systems (GASL).",
     "currentTools": {
       "description": "I am currently interested in or working with the following tools and programming languages:",
-      "toolList": ["React", "Python", "C#"]
+      "toolList": ["React", "C#"]
     }
   }
 }
