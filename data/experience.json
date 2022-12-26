@@ -1,18 +1,30 @@
 {
   "experience": [
     {
+      "companyName": "Global Analyzer Systems (GASL)",
+      "positionName": "Jr. Software Developer",
+      "companyLink": "https://gasl.ca/",
+      "startDate": "January 2023",
+      "endDate": "Current",
+      "tools": ["React", "SQL", "C#", "Git", "Azure", "Modbus TCP Framework"],
+      "jobDetails": [
+        "Work alongside the developers to help develop and perform integration tests to ensure code meets the defined acceptance criteria.",
+        "Assist other developers with debugging, or additional testing as required.",
+        "Write object-orientated code.",
+        "Work  with  the  product  team  to  understand/clarify  feature  requirements,  and  implement  solutions  to develop software functionality."
+      ]
+    },
+    {
       "companyName": "Irdeto",
       "positionName": "Jr. Software Developer",
       "companyLink": "https://irdeto.com/",
       "startDate": "September 2020",
       "endDate": "September 2021",
       "tools": [
-        "HTML",
-        "CSS",
-        "JavaScript",
         "Python",
         "Selenium",
         "React",
+        "JavaScript",
         "Redux",
         "SASS",
         "Django",
