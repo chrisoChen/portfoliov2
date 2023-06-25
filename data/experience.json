@@ -1,66 +1,65 @@
 {
-  "experience": [
-    {
-      "companyName": "Global Analyzer Systems (GASL)",
-      "positionName": "Jr. Software Developer",
-      "companyLink": "https://gasl.ca/",
-      "startDate": "January 2023",
-      "endDate": "Current",
-      "tools": ["React", "SQL", "C#", "Git", "Azure", "Modbus TCP Framework"],
-      "jobDetails": [
-        "Work alongside the developers to help develop and perform integration tests to ensure code meets the defined acceptance criteria.",
-        "Assist other developers with debugging, or additional testing as required.",
-        "Write object-orientated code.",
-        "Work  with  the  product  team  to  understand/clarify  feature  requirements,  and  implement  solutions  to develop software functionality."
-      ]
-    },
-    {
-      "companyName": "Irdeto",
-      "positionName": "Jr. Software Developer",
-      "companyLink": "https://irdeto.com/",
-      "startDate": "September 2020",
-      "endDate": "September 2021",
-      "tools": [
-        "Python",
-        "Selenium",
-        "React",
-        "JavaScript",
-        "Redux",
-        "SASS",
-        "Django",
-        "MySQL",
-        "Docker",
-        "Chrome Extension API",
-        "AWS",
-        "Git"
-      ],
-      "jobDetails": [
-        "Created Python scripts to discover tens-of-thousands of daily infringing copyright video links.",
-        "Added search and UI features to our script managing app to ease developer and analyst workload.",
-        "Built and tested scraping features for a Google Chrome extension to automate DMCA take down notices.",
-        "Hosted the discovery team’s retrospective meetings to improve team productivity and efficiency."
-      ]
-    },
-    {
-      "companyName": "moovez",
-      "positionName": "Software Developer Intern",
-      "companyLink": "https://www.linkedin.com/company/moovez/",
-      "startDate": "May 2020",
-      "endDate": "August 2020",
-      "tools": [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "jQuery",
-        "Bootstrap",
-        "Figma",
-        "Affinity Photo"
-      ],
-      "jobDetails": [
-        "Converted UI designs in Figma to HTML to attract potential customers to use our delivery services.",
-        "Tested web pages with multiple browsers and devices to ensure web pages were cross-platform friendly.",
-        "Assessed the usability of our web app with system tests to improve the customer's browsing experience."
-      ]
-    }
-  ]
-}
+    "experience": [
+      {
+        "companyName": "Global Analyzer Systems (GASL)",
+        "positionName": "Jr. Software Developer",
+        "companyLink": "https://gasl.ca/",
+        "startDate": "January 2023",
+        "endDate": "Current",
+        "tools": ["React", "SQL Server", ".NET", "C#", "WPF", "Trello", "Git", "Github Actions"],
+        "jobDetails": [
+          "Expanded a WPF app with reporting features to help customers simplify their emissions reporting process.",
+          "Converted logic made inside SQL Stored procedures to C# using Entity Framework to fix maintenance and development issues",
+          "Presented project designs and ideas to teams of 10 coworkers to improve R&D software solutions"
+        ]
+      },
+      {
+        "companyName": "Irdeto",
+        "positionName": "Jr. Software Developer",
+        "companyLink": "https://irdeto.com/",
+        "startDate": "September 2020",
+        "endDate": "September 2021",
+        "tools": [
+          "Python",
+          "Selenium",
+          "React",
+          "JavaScript",
+          "Redux",
+          "SASS",
+          "Django",
+          "MySQL",
+          "Docker",
+          "Chrome Extension API",
+          "AWS",
+          "Git"
+        ],
+        "jobDetails": [
+          "Created Python scripts to web scrape and discover tens-of-thousands of daily infringing copyright video links",
+          "Added search and UI features to our script managing app to ease developer and analyst workload.",
+          "Built and tested scraping features for a Google Chrome extension to automate DMCA take down notices for live sporting events.",
+          "Hosted the discovery team’s retrospective meetings to improve team productivity and efficiency."
+        ]
+      },
+      {
+        "companyName": "moovez",
+        "positionName": "Software Developer Intern",
+        "companyLink": "https://www.linkedin.com/company/moovez/",
+        "startDate": "May 2020",
+        "endDate": "August 2020",
+        "tools": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "jQuery",
+          "Bootstrap",
+          "Figma",
+          "Affinity Photo"
+        ],
+        "jobDetails": [
+          "Converted Figma prototypes to HTML to attract potential customers to use our delivery services.",
+          "Tested web pages with multiple browsers and devices to ensure web pages were cross-platform friendly"
+        ]
+      }
+    ]
+  }
+  
