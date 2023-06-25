@@ -2,15 +2,15 @@
     "experience": [
       {
         "companyName": "Global Analyzer Systems (GASL)",
-        "positionName": "Jr. Software Developer",
+        "positionName": "Software Developer",
         "companyLink": "https://gasl.ca/",
         "startDate": "January 2023",
         "endDate": "Current",
         "tools": ["React", "SQL Server", ".NET", "C#", "WPF", "Trello", "Git", "Github Actions"],
         "jobDetails": [
           "Expanded a WPF app with reporting features to help customers simplify their emissions reporting process.",
-          "Converted logic made inside SQL Stored procedures to C# using Entity Framework to fix maintenance and development issues",
-          "Presented project designs and ideas to teams of 10 coworkers to improve R&D software solutions"
+          "Converted logic made inside SQL Stored procedures to C# using Entity Framework to fix maintenance and development issues.",
+          "Presented project designs and ideas to teams of 10 coworkers to improve R&D software solutions."
         ]
       },
       {
@@ -34,7 +34,7 @@
           "Git"
         ],
         "jobDetails": [
-          "Created Python scripts to web scrape and discover tens-of-thousands of daily infringing copyright video links",
+          "Created Python scripts to web scrape and discover tens-of-thousands of daily infringing copyright video links.",
           "Added search and UI features to our script managing app to ease developer and analyst workload.",
           "Built and tested scraping features for a Google Chrome extension to automate DMCA take down notices for live sporting events.",
           "Hosted the discovery team’s retrospective meetings to improve team productivity and efficiency."
@@ -57,7 +57,7 @@
         ],
         "jobDetails": [
           "Converted Figma prototypes to HTML to attract potential customers to use our delivery services.",
-          "Tested web pages with multiple browsers and devices to ensure web pages were cross-platform friendly"
+          "Tested web pages with multiple browsers and devices to ensure web pages were cross-platform friendly."
         ]
       }
     ]
