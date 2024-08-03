@@ -31,6 +31,7 @@ function SectionComponents(sections) {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
+          scrollMargin: "200px",
         }}
       >
         <Suspense fallback={<CircularProgress color="secondaryAlt" />}>

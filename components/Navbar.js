@@ -53,7 +53,7 @@ function Navbar({ executeScroll, navbarOptions }) {
 
   return (
     <>
-      <AppBar position="static" elevation={0} sx={{ py: 2 }}>
+      <AppBar position="fixed" elevation={0} sx={{ py: 2, height: "200px" }}>
         <Container>
           <Toolbar disableGutters component="ul" sx={ToolbarStyle}>
             <IconButton
