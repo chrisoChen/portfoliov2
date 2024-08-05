@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import LogoIconBtn from "./LogoIconBtn";
 
 import AppBar from "@mui/material/AppBar";
@@ -11,12 +11,14 @@ import DescriptionIcon from "@mui/icons-material/Description";
 import MenuIcon from "@mui/icons-material/Menu";
 import Divider from "@mui/material/Divider";
 import List from "@mui/material/List";
+import { SectionDataContext } from "../context/SectionDataContext";
 
 import NavItems from "./NavItems";
 import NavDrawer from "./NavDrawer";
 
 function Navbar({ executeScroll, navbarOptions }) {
   const [drawerNavOpen, setDrawerNavOpen] = useState(false);
+  const { toolbarHeight } = useContext(SectionDataContext);
 
   const handleDrawerToggle = () => {
     setDrawerNavOpen(!drawerNavOpen);
@@ -53,7 +55,11 @@ function Navbar({ executeScroll, navbarOptions }) {
 
   return (
     <>
-      <AppBar position="fixed" elevation={0} sx={{ py: 2, height: "200px" }}>
+      <AppBar
+        position="fixed"
+        elevation={3}
+        sx={{ py: 2, height: toolbarHeight }}
+      >
         <Container>
           <Toolbar disableGutters component="ul" sx={ToolbarStyle}>
             <IconButton

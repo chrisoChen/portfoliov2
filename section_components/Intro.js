@@ -8,14 +8,18 @@ import Navbar from "../components/Navbar";
 import { Grid } from "@mui/material";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
 import Slide from "@mui/material/Slide";
+import { SectionDataContext } from "../context/SectionDataContext";
+import { useContext } from "react";
 
 function Intro({ sectionRef }) {
+  const { toolbarHeight } = useContext(SectionDataContext);
+
   return (
     <Slide in={true} direction="down">
       <Grid
         container
         direction="column"
-        sx={{ minHeight: "100vh" }}
+        sx={{ minHeight: "100vh", paddingTop: toolbarHeight }}
         ref={sectionRef}
       >
         <Grid item>

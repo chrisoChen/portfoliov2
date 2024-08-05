@@ -1,4 +1,4 @@
 {
   "sections": ["About", "Experience", "Projects", "Contact"],
-  "toolbarWidth": "10rem"
+  "toolbarHeight": "10rem"
 }
