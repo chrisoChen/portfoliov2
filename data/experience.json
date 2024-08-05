@@ -1,65 +1,100 @@
 {
-    "experience": [
-      {
-        "companyName": "Global Analyzer Systems (GASL)",
-        "positionName": "Software Developer",
-        "companyLink": "https://gasl.ca/",
-        "startDate": "January 2023",
-        "endDate": "Current",
-        "tools": ["React", "SQL Server", ".NET", "C#", "WPF", "Trello", "Git", "Github Actions"],
-        "jobDetails": [
-          "Expanded a WPF app with reporting features to help customers simplify their emissions reporting process.",
-          "Converted logic made inside SQL Stored procedures to C# using Entity Framework to fix maintenance and development issues.",
-          "Presented project designs and ideas to teams of 10 coworkers to improve R&D software solutions."
-        ]
-      },
-      {
-        "companyName": "Irdeto",
-        "positionName": "Jr. Software Developer",
-        "companyLink": "https://irdeto.com/",
-        "startDate": "September 2020",
-        "endDate": "September 2021",
-        "tools": [
-          "Python",
-          "Selenium",
-          "React",
-          "JavaScript",
-          "Redux",
-          "SASS",
-          "Django",
-          "MySQL",
-          "Docker",
-          "Chrome Extension API",
-          "AWS",
-          "Git"
-        ],
-        "jobDetails": [
-          "Created Python scripts to web scrape and discover tens-of-thousands of daily infringing copyright video links.",
-          "Added search and UI features to our script managing app to ease developer and analyst workload.",
-          "Built and tested scraping features for a Google Chrome extension to automate DMCA take down notices for live sporting events.",
-          "Hosted the discovery team’s retrospective meetings to improve team productivity and efficiency."
-        ]
-      },
-      {
-        "companyName": "moovez",
-        "positionName": "Software Developer Intern",
-        "companyLink": "https://www.linkedin.com/company/moovez/",
-        "startDate": "May 2020",
-        "endDate": "August 2020",
-        "tools": [
-          "HTML",
-          "CSS",
-          "JavaScript",
-          "jQuery",
-          "Bootstrap",
-          "Figma",
-          "Affinity Photo"
-        ],
-        "jobDetails": [
-          "Converted Figma prototypes to HTML to attract potential customers to use our delivery services.",
-          "Tested web pages with multiple browsers and devices to ensure web pages were cross-platform friendly."
-        ]
-      }
-    ]
-  }
-  
+  "experience": [
+    {
+      "companyName": "AbaData",
+      "positionName": "Full Stack Developer",
+      "companyLink": "https://abadata.ca/",
+      "startDate": "August 2023",
+      "endDate": "August 2024",
+      "tools": [
+        "C#",
+        "Blazor",
+        ".NET",
+        "MVC",
+        "SQL Server",
+        "Tailwind CSS",
+        "Azure",
+        "Azure Functions",
+        "Azure App Service",
+        "Entity Framework",
+        "Git",
+        "FME",
+        "Github Actions"
+      ],
+      "jobDetails": [
+        "Developed critical and quality-of-life features for a Blazor web app to assist the customer support team in managing and creating estimates and invoices for over 5,000 clients.",
+        "Automated the company’s monthly data import process using C# and FME for our web and mobile SaaS products, reducing the original process time from approximately 60 hours per month.",
+        "Created an automated background job processing application using a C# MVC web app to calculate production metrics for gas, water, and oil in millions of oil wells monthly. This supported the company’s pipeline integrity product."
+      ]
+    },
+    {
+      "companyName": "Global Analyzer Systems (GASL)",
+      "positionName": "Software Developer",
+      "companyLink": "https://gasl.ca/",
+      "startDate": "January 2023",
+      "endDate": "Current",
+      "tools": [
+        "React",
+        "SQL Server",
+        ".NET",
+        "C#",
+        "WPF",
+        "Trello",
+        "Git",
+        "Github Actions"
+      ],
+      "jobDetails": [
+        "Expanded a WPF app with reporting features to help customers simplify their emissions reporting process.",
+        "Converted logic made inside SQL Stored procedures to C# using Entity Framework to fix maintenance and development issues.",
+        "Presented project designs and ideas to a team of 10 coworkers to improve R&D software solutions."
+      ]
+    },
+    {
+      "companyName": "Irdeto",
+      "positionName": "Jr. Software Developer",
+      "companyLink": "https://irdeto.com/",
+      "startDate": "September 2020",
+      "endDate": "September 2021",
+      "tools": [
+        "Python",
+        "Selenium",
+        "React",
+        "JavaScript",
+        "Redux",
+        "SASS",
+        "Django",
+        "MySQL",
+        "Docker",
+        "Chrome Extension API",
+        "AWS",
+        "Git"
+      ],
+      "jobDetails": [
+        "Created Python scripts to web scrape and discover tens-of-thousands of daily infringing copyright video links.",
+        "Added search and UI features to our script managing app to ease developer and analyst workload.",
+        "Built and tested scraping features for a Google Chrome extension to automate DMCA take down notices for live sporting events.",
+        "Hosted the discovery team’s retrospective meetings to improve team productivity and efficiency."
+      ]
+    },
+    {
+      "companyName": "moovez",
+      "positionName": "Software Developer Intern",
+      "companyLink": "https://www.linkedin.com/company/moovez/",
+      "startDate": "May 2020",
+      "endDate": "August 2020",
+      "tools": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "jQuery",
+        "Bootstrap",
+        "Figma",
+        "Affinity Photo"
+      ],
+      "jobDetails": [
+        "Converted Figma prototypes to HTML to attract potential customers to use our delivery services.",
+        "Tested web pages with multiple browsers and devices to ensure web pages were cross-platform friendly."
+      ]
+    }
+  ]
+}

@@ -1,9 +1,10 @@
 const colorTheme = {
   palette: {
     primary: {
-      main: "#55828B",
+      main: "#5b87a4",
       // steel-green: #55828B
       // stable-blue: #5b87a4
+      // OG: #55828B
     },
     secondary: {
       main: "#C9E4CA",
