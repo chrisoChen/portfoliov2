@@ -19,7 +19,9 @@ function InfoGridRow(props) {
         key={uuidv4()}
         projectName={project.name}
         projectTools={
-          githubOwner === myRepo ? project.topics : [project.language]
+          githubOwner === myRepo && project.topics.length > 0
+            ? project.topics
+            : [project.language]
         }
         projectSummary={
           githubOwner === myRepo
