@@ -10,11 +10,14 @@ import useIntersectionObserver from "../hooks/useIntersectionObserver";
 import Slide from "@mui/material/Slide";
 
 function Intro({ sectionRef }) {
-  const isSectionVisible = useIntersectionObserver(sectionRef);
-
   return (
-    <Slide in={isSectionVisible} direction="down">
-      <Grid container direction="column" sx={{ minHeight: "100vh" }}>
+    <Slide in={true} direction="down">
+      <Grid
+        container
+        direction="column"
+        sx={{ minHeight: "100vh" }}
+        ref={sectionRef}
+      >
         <Grid item>
           <Navbar />
         </Grid>
