@@ -71,7 +71,7 @@
       ],
       "jobDetails": [
         "Created Python scripts to web scrape and discover tens-of-thousands of daily infringing copyright video links.",
-        "Added search and UI features to our script managing app to ease developer and analyst workload.",
+        "Added search and UI features to a script managing app built with React to ease developer and analyst workload.",
         "Built and tested scraping features for a Google Chrome extension to automate DMCA take down notices for live sporting events.",
         "Hosted the discovery team’s retrospective meetings to improve team productivity and efficiency."
       ]
